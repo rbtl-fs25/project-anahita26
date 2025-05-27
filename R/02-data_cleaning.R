@@ -1,5 +1,8 @@
 library(tidyverse)
 
+# Import data from data/raw folder
+clothing_data <- read_csv("data/raw/cloting_data.csv")
+
 # Change column names
 colnames(clothing_data) <- c("date", "age", "gender", "eth_status",
                              "continent", "income", "env_conscious",
@@ -12,12 +15,8 @@ colnames(clothing_data) <- c("date", "age", "gender", "eth_status",
                              "get_gifts", "get_make_clothes", "disposal_trash",
                              "disposal_textile_center", "study_field")
 
-# Delete the first 9 rows (in-class responses)
-filtered_data <- clothing_data |> 
-  filter(!is.na(study_field))
-
 # Change relevant categories to single number and numeric data type
-cleaned_data <- filtered_data |> 
+clothing_data_cleaned <- clothing_data |> 
   mutate(income = case_when(
     income == "less than 999" ~ "500",
     income == "1000 - 1999" ~ "1500",
@@ -30,7 +29,14 @@ cleaned_data <- filtered_data |>
     second_hand == "51-75" ~ "62.5",
     second_hand == "76-100" ~ "87.5"))
 
+# Relocate columns for better organization
+clothing_data_cleaned <- clothing_data_cleaned |> 
+  relocate(study_field, .after = eth_status) |> 
+  relocate(disposal_trash, .after = disposal_recycling_bins) |> 
+  relocate(disposal_textile_center, .after = disposal_trash) |> 
+  relocate(email, .after = get_make_clothes)
 
-class(cleaned_data)
+# Export processed data in correct folder
+write_csv(clothing_data_cleaned, "data/processed/cloting_data_cleaned.csv")
 
 
