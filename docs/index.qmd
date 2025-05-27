@@ -76,6 +76,33 @@ purchasing_habits_df[4, "purchasing_percentages"] <- sum(data$get_gifts == "yes"
 purchasing_habits_df[5, "purchasing_percentages"] <- sum(data$get_make_clothes == "yes") / count(data) * 100
 ```
 
+```{r}
+# Calculate how many respondents purchase new clothes 
+brand_sust_filtered <- data |> 
+  filter(!is.na(brand_sust))
+
+new_clothes_df <- data.frame(
+  buyers_percentage = numeric(1),
+  brand_sust_percentage = numeric(1))
+
+new_clothes_df[1, "buyers_percentage"] <- sum(data$new_clothes == "yes") / count(data) * 100
+new_clothes_df[1, "brand_sust_percentage"] <-  sum(brand_sust_filtered$brand_sust == "yes") / count(brand_sust_filtered) * 100
+```
+
+```{r}
+# Mean percentage of second hand clothing purchases
+second_hand_purchases_percentage <- mean(data$second_hand)
+
+data |> 
+  count(motivation)
+
+data |> 
+  count(disposal)
+
+data |> 
+  count(disposal_reason)
+```
+
 # Conclusion
 
 ```{r}

@@ -1,22 +1,22 @@
-date,age,gender,eth_status,continent,income,env_conscious,new_clothes,new_items,brand_sust,second_hand,motivation,disposal,disposal_reason,repair,email,disposal_thrift,disposal_flea_market,disposal_fam_friends,disposal_sell_online,disposal_recycling_bins,get_thrift,get_hand_me_down,get_swaps,get_gifts,get_make_clothes,disposal_trash,disposal_textile_center,study_field
-2025-05-19T09:24:44Z,24,woman,master,Europe,2500,3,yes,30,yes,62.5,style/ uniqueness,once,damaged or worn out,3,NA,yes,yes,yes,yes,yes,yes,no,yes,no,no,yes,no,engineering
-2025-05-19T15:19:12Z,22,woman,master,Europe,1500,3,yes,5,no,12.5,style/ uniqueness,never,damaged or worn out,4,NA,yes,no,yes,no,yes,yes,yes,no,yes,no,no,no,engineering
-2025-05-19T15:48:36Z,25,woman,master,Europe,1500,4,no,NA,NA,87.5,style/ uniqueness,once,no longer fits,4,margarete.breitenhuber@gmx.de,yes,no,yes,yes,no,yes,yes,yes,no,yes,yes,no,engineering
-2025-05-19T16:04:13Z,23,woman,master,Europe,1500,3,no,NA,NA,87.5,style/ uniqueness,once,I need to make space,5,NA,yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,no,engineering
-2025-05-19T16:16:36Z,19,woman,other,Europe,500,2,yes,2,yes,NA,lower cost,once,no longer fits,3,NA,yes,no,yes,no,yes,yes,no,no,yes,yes,no,no,PH
-2025-05-19T16:20:03Z,25,woman,master,Asia,2500,3,yes,5,yes,62.5,lower cost,never,no longer suits my style,2,NA,yes,no,yes,no,yes,yes,no,no,no,no,no,no,management and social sciences
-2025-05-19T16:21:43Z,22,man,master,Europe,2500,4,yes,4,yes,37.5,lower cost,once,damaged or worn out,0,NA,no,no,no,no,no,yes,yes,no,yes,no,yes,no,engineering
-2025-05-19T16:25:32Z,23,woman,master,Europe,1500,4,yes,2,yes,37.5,environmental concerns,once,damaged or worn out,4,jlenzlinger@ethz.ch,yes,no,yes,no,yes,yes,yes,no,no,no,no,no,environmental and earth sciences
-2025-05-19T16:33:31Z,22,woman,master,Europe,500,3,yes,4,no,87.5,style/ uniqueness,never,no longer suits my style,3,NA,no,no,yes,yes,no,yes,yes,no,yes,no,no,no,engineering
-2025-05-19T16:35:08Z,26,woman,master,Asia,2500,4,yes,3,yes,12.5,environmental concerns,never,no longer fits,3,NA,yes,no,yes,no,yes,yes,yes,no,no,no,no,no,natural sciences
-2025-05-19T16:35:56Z,22,woman,master,Asia,NA,3,yes,12,yes,12.5,style/ uniqueness,once,damaged or worn out,1,NA,no,no,no,no,yes,yes,no,no,yes,no,yes,no,management and social sciences
-2025-05-19T16:36:25Z,22,woman,master,Asia,500,4,yes,3,yes,12.5,style/ uniqueness,once,no longer fits,3,yiningliu0621@gmail.com,yes,no,yes,yes,yes,yes,no,no,yes,no,no,no,management and social sciences
-2025-05-19T16:37:22Z,24,man,master,Asia,1500,3,yes,3,no,NA,style/ uniqueness,never,no longer suits my style,3,NA,no,no,no,yes,yes,yes,no,no,yes,no,no,no,engineering
-2025-05-19T16:42:30Z,24,man,master,Europe,1500,3,no,NA,NA,87.5,lower cost,once,damaged or worn out,4,NA,yes,no,no,no,no,yes,yes,no,yes,no,yes,no,engineering
-2025-05-19T16:43:32Z,27,woman,master,Europe,2500,4,yes,6,yes,37.5,other,never,damaged or worn out,4,NA,yes,yes,yes,yes,yes,yes,yes,no,yes,yes,no,yes,natural sciences
-2025-05-19T16:56:31Z,22,woman,master,Europe,500,4,no,NA,NA,12.5,environmental concerns,once,no longer fits,2,NA,no,no,yes,no,yes,yes,yes,yes,yes,no,no,no,engineering
-2025-05-19T17:11:00Z,22,woman,master,Europe,500,4,yes,2,yes,87.5,environmental concerns,once,no longer suits my style,4,NA,yes,yes,yes,yes,no,yes,yes,yes,no,no,no,no,engineering
-2025-05-20T11:36:39Z,22,man,master,North America,1500,3,yes,5,no,NA,lower cost,once,damaged or worn out,3,NA,no,no,no,no,no,yes,yes,no,no,no,yes,no,engineering
-2025-05-20T11:56:34Z,23,man,master,Europe,3500,3,yes,10,no,37.5,lower cost,once,no longer suits my style,1,NA,no,no,yes,no,yes,yes,no,no,yes,no,no,no,management and social sciences
-2025-05-20T17:29:45Z,24,woman,master,North America,500,3,no,NA,NA,NA,style/ uniqueness,once,no longer suits my style,5,NA,yes,no,yes,no,no,no,no,no,no,no,no,no,engineering
-2025-05-21T22:45:47Z,29,man,phd,Asia,3500,3,no,NA,NA,NA,style/ uniqueness,never,damaged or worn out,4,waturwayis@gmail.com,no,no,yes,yes,no,yes,yes,no,yes,yes,no,yes,engineering
+date,age,gender,eth_status,study_field,continent,income,env_conscious,new_clothes,new_items,brand_sust,second_hand,motivation,disposal,disposal_reason,repair,disposal_thrift,disposal_flea_market,disposal_fam_friends,disposal_sell_online,disposal_recycling_bins,disposal_trash,disposal_textile_center,get_thrift,get_hand_me_down,get_swaps,get_gifts,get_make_clothes,email
+2025-05-19T09:24:44Z,24,woman,master,engineering,Europe,2500,3,yes,30,yes,62.5,style/ uniqueness,once,damaged or worn out,3,yes,yes,yes,yes,yes,yes,no,yes,no,yes,no,no,NA
+2025-05-19T15:19:12Z,22,woman,master,engineering,Europe,1500,3,yes,5,no,12.5,style/ uniqueness,never,damaged or worn out,4,yes,no,yes,no,yes,no,no,yes,yes,no,yes,no,NA
+2025-05-19T15:48:36Z,25,woman,master,engineering,Europe,1500,4,no,NA,NA,87.5,style/ uniqueness,once,no longer fits,4,yes,no,yes,yes,no,yes,no,yes,yes,yes,no,yes,margarete.breitenhuber@gmx.de
+2025-05-19T16:04:13Z,23,woman,master,engineering,Europe,1500,3,no,NA,NA,87.5,style/ uniqueness,once,I need to make space,5,yes,no,yes,yes,yes,yes,no,yes,yes,yes,yes,yes,NA
+2025-05-19T16:16:36Z,19,woman,other,PH,Europe,500,2,yes,2,yes,0,lower cost,once,no longer fits,3,yes,no,yes,no,yes,no,no,yes,no,no,yes,yes,NA
+2025-05-19T16:20:03Z,25,woman,master,management and social sciences,Asia,2500,3,yes,5,yes,62.5,lower cost,never,no longer suits my style,2,yes,no,yes,no,yes,no,no,yes,no,no,no,no,NA
+2025-05-19T16:21:43Z,22,man,master,engineering,Europe,2500,4,yes,4,yes,37.5,lower cost,once,damaged or worn out,0,no,no,no,no,no,yes,no,yes,yes,no,yes,no,NA
+2025-05-19T16:25:32Z,23,woman,master,environmental and earth sciences,Europe,1500,4,yes,2,yes,37.5,environmental concerns,once,damaged or worn out,4,yes,no,yes,no,yes,no,no,yes,yes,no,no,no,jlenzlinger@ethz.ch
+2025-05-19T16:33:31Z,22,woman,master,engineering,Europe,500,3,yes,4,no,87.5,style/ uniqueness,never,no longer suits my style,3,no,no,yes,yes,no,no,no,yes,yes,no,yes,no,NA
+2025-05-19T16:35:08Z,26,woman,master,natural sciences,Asia,2500,4,yes,3,yes,12.5,environmental concerns,never,no longer fits,3,yes,no,yes,no,yes,no,no,yes,yes,no,no,no,NA
+2025-05-19T16:35:56Z,22,woman,master,management and social sciences,Asia,NA,3,yes,12,yes,12.5,style/ uniqueness,once,damaged or worn out,1,no,no,no,no,yes,yes,no,yes,no,no,yes,no,NA
+2025-05-19T16:36:25Z,22,woman,master,management and social sciences,Asia,500,4,yes,3,yes,12.5,style/ uniqueness,once,no longer fits,3,yes,no,yes,yes,yes,no,no,yes,no,no,yes,no,yiningliu0621@gmail.com
+2025-05-19T16:37:22Z,24,man,master,engineering,Asia,1500,3,yes,3,no,0,style/ uniqueness,never,no longer suits my style,3,no,no,no,yes,yes,no,no,yes,no,no,yes,no,NA
+2025-05-19T16:42:30Z,24,man,master,engineering,Europe,1500,3,no,NA,NA,87.5,lower cost,once,damaged or worn out,4,yes,no,no,no,no,yes,no,yes,yes,no,yes,no,NA
+2025-05-19T16:43:32Z,27,woman,master,natural sciences,Europe,2500,4,yes,6,yes,37.5,other,never,damaged or worn out,4,yes,yes,yes,yes,yes,no,yes,yes,yes,no,yes,yes,NA
+2025-05-19T16:56:31Z,22,woman,master,engineering,Europe,500,4,no,NA,NA,12.5,environmental concerns,once,no longer fits,2,no,no,yes,no,yes,no,no,yes,yes,yes,yes,no,NA
+2025-05-19T17:11:00Z,22,woman,master,engineering,Europe,500,4,yes,2,yes,87.5,environmental concerns,once,no longer suits my style,4,yes,yes,yes,yes,no,no,no,yes,yes,yes,no,no,NA
+2025-05-20T11:36:39Z,22,man,master,engineering,North America,1500,3,yes,5,no,0,lower cost,once,damaged or worn out,3,no,no,no,no,no,yes,no,yes,yes,no,no,no,NA
+2025-05-20T11:56:34Z,23,man,master,management and social sciences,Europe,3500,3,yes,10,no,37.5,lower cost,once,no longer suits my style,1,no,no,yes,no,yes,no,no,yes,no,no,yes,no,NA
+2025-05-20T17:29:45Z,24,woman,master,engineering,North America,500,3,no,NA,NA,0,style/ uniqueness,once,no longer suits my style,5,yes,no,yes,no,no,no,no,no,no,no,no,no,NA
+2025-05-21T22:45:47Z,29,man,phd,engineering,Asia,3500,3,no,NA,NA,0,style/ uniqueness,never,damaged or worn out,4,no,no,yes,yes,no,no,yes,yes,yes,no,yes,yes,waturwayis@gmail.com

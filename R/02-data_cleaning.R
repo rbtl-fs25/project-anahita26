@@ -23,7 +23,7 @@ clothing_data_cleaned <- clothing_data |>
     income == "2000 - 3000" ~ "2500",
     income == "3000 or greater" ~ "3500")) |> 
   mutate(second_hand = case_when(
-    second_hand == "0" ~ "0",
+    second_hand == "Zero" ~ "0",
     second_hand == "1-25" ~ "12.5",
     second_hand == "26-50" ~ "37.5",
     second_hand == "51-75" ~ "62.5",
