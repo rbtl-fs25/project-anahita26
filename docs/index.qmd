@@ -1,0 +1,40 @@
+---
+title: "Clothing Purchasing and Disposal Habits of ETH Zurich Members"
+date: today
+author:
+  - name: Anahita Darvish
+    orcid: 0000-0003-2196-5015
+    email: me@web.org
+    affiliation: 
+      - name: ETH Zurich
+        url: https://ethz.ch/de.html
+format:
+  html:
+    embed-resources: true
+    toc: true
+execute:
+  warning: false
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+editor: visual
+---
+
+# Introduction
+
+# Methods
+
+# Results
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+
+data <-  read_csv("data/processed/cloting_data_cleaned.csv")
+```
+
+# Conclusion
+
+```{r}
+
+```
