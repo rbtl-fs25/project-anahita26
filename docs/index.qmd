@@ -59,8 +59,33 @@ ggplot(data = purchasing_long,
        fill = "Acquisition Method")+
   theme_minimal()
 
+```
 
-  
+Data visualization for disposal habits by gender
+
+```{r}
+# Reshape disposal method columns to long format
+disposal_long <- data |> 
+  pivot_longer(cols = starts_with("disposal_"),
+               names_to = "method",
+               values_to = "response") |> 
+  filter(response == "yes")
+
+# Clean method labels
+disposal_long$method <- disposal_long$method |> 
+  str_replace("disposal_", "") |> 
+  str_replace_all("_", " ") |> 
+  str_to_title()
+
+# Plot
+ggplot(disposal_long,
+       mapping = aes(x = gender,
+                     fill = method)) +
+  geom_bar(position = "dodge") +
+  labs(x = "Disposal Method",
+       y = "Number of Respondents",
+       fill = "Gender") +
+  theme_minimal() 
 ```
 
 ```{r}
