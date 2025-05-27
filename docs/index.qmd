@@ -29,8 +29,51 @@ editor: visual
 ```{r}
 library(tidyverse)
 library(ggplot2)
+library(ggthemes)
 
 data <-  read_csv("data/processed/cloting_data_cleaned.csv")
+
+ggplot(data = data,
+       mapping = aes(x = disposal_thrift,
+                     fill = study_field)) +
+  geom_bar() +
+  scale_fill_colorblind()
+```
+
+```{r}
+# Create data frame with each disposal method and initialize percentage
+disposal_habits_df <- data.frame(
+  disposal_method = c("Donate", "Flea Market", "Family & Friends",
+                      "Sell Online", "Recyling Bins", "Regular Trash", 
+                      "Third Party Textile Recycling"),
+  disposal_percentages = numeric(7)
+)
+
+# Calculate percentage of respondent's disposal habits and assign to correct place in data frame
+disposal_habits_df[1, "disposal_percentages"] <- sum(data$disposal_thrift == "yes") / count(data) * 100
+disposal_habits_df[2, "disposal_percentages"] <- sum(data$disposal_flea_market == "yes") / count(data) * 100
+disposal_habits_df[3, "disposal_percentages"] <- sum(data$disposal_fam_friends == "yes") / count(data) * 100
+disposal_habits_df[4, "disposal_percentages"] <- sum(data$disposal_sell_online == "yes") / count(data) * 100
+disposal_habits_df[5, "disposal_percentages"] <- sum(data$disposal_recycling_bins == "yes") / count(data) * 100
+disposal_habits_df[6, "disposal_percentages"] <- sum(data$disposal_trash == "yes") / count(data) * 100
+disposal_habits_df[7, "disposal_percentages"] <- sum(data$disposal_textile_center == "yes") / count(data) * 100
+
+```
+
+```{r}
+# Create data frame with each purchasing method and initialize percentage
+purchasing_habits_df <- data.frame(
+  purchasing_method = c("Thrift", "Hand-me-downs", "Clothing Swaps",
+                      "Gifts", "Make Clothing"),
+  purchasing_percentages = numeric(5)
+)
+
+# Calculate percentage of respondent's purchasing habits and assign to correct place in data frame
+purchasing_habits_df[1, "purchasing_percentages"] <- sum(data$get_thrift == "yes") / count(data) * 100
+purchasing_habits_df[2, "purchasing_percentages"] <- sum(data$get_hand_me_down == "yes") / count(data) * 100
+purchasing_habits_df[3, "purchasing_percentages"] <- sum(data$get_swaps == "yes") / count(data) * 100
+purchasing_habits_df[4, "purchasing_percentages"] <- sum(data$get_gifts == "yes") / count(data) * 100
+purchasing_habits_df[5, "purchasing_percentages"] <- sum(data$get_make_clothes == "yes") / count(data) * 100
 ```
 
 # Conclusion
