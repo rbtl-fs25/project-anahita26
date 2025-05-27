@@ -26,6 +26,49 @@ editor: visual
 
 # Results
 
+Summary table with statistics
+
+```{r}
+library(tidyverse)
+library(gt)
+library(knitr)
+
+# Convert and clean relevant columns
+data_clean <- data %>%
+  mutate(across(c(new_items, env_conscious), as.numeric))
+
+# Select variables to summarize
+summary_data <- data_clean %>%
+  summarise(
+    `New Items - Mean` = mean(new_items, na.rm = TRUE),
+    `New Items - Median` = median(new_items, na.rm = TRUE),
+    `New Items - SD` = sd(new_items, na.rm = TRUE),
+    `New Items - Min` = min(new_items, na.rm = TRUE),
+    `New Items - Max` = max(new_items, na.rm = TRUE),
+    
+    `Env Conscious - Mean` = mean(env_conscious, na.rm = TRUE),
+    `Env Conscious - Median` = median(env_conscious, na.rm = TRUE),
+    `Env Conscious - SD` = sd(env_conscious, na.rm = TRUE),
+    `Env Conscious - Min` = min(env_conscious, na.rm = TRUE),
+    `Env Conscious - Max` = max(env_conscious, na.rm = TRUE)
+  ) %>%
+  pivot_longer(cols = everything(),
+               names_to = "Metric", 
+               values_to = "Value")
+
+# Create a gt table
+summary_data %>%
+  gt() %>%
+  tab_header(
+    title = "Summary Statistics of Key Variables"
+  ) %>%
+  fmt_number(columns = "Value", decimals = 2)
+
+```
+
+```{}
+```
+
 Data visualization of purchasing habits by income level
 
 ```{r}
