@@ -26,6 +26,8 @@ editor: visual
 
 # Results
 
+Data visualization of purchasing habits by income level
+
 ```{r}
 library(tidyverse)
 library(ggplot2)
@@ -33,11 +35,32 @@ library(ggthemes)
 
 data <-  read_csv("data/processed/cloting_data_cleaned.csv")
 
-ggplot(data = data,
-       mapping = aes(x = disposal_thrift,
-                     fill = study_field)) +
-  geom_bar() +
-  scale_fill_colorblind()
+# Reshape purchasing method columns
+purchasing_long <- data |> 
+  pivot_longer(cols = starts_with("get_"),
+               names_to = "method",
+               values_to = "response") |> 
+  filter(response == "yes")
+
+# Clean method labels
+purchasing_long$method <- purchasing_long$method |> 
+  str_replace("get_", "") |> 
+  str_replace_all("_", " ") |> 
+  str_to_title()
+
+# Plot
+ggplot(data = purchasing_long, 
+       mapping = aes(x = income,
+                     fill = method)) +
+  geom_bar(position = "fill")+
+  scale_y_continuous(labels = scales::percent) +
+  labs(x = "Income (CHF/month)",
+       y = "Proportion of Respondents",
+       fill = "Acquisition Method")+
+  theme_minimal()
+
+
+  
 ```
 
 ```{r}
