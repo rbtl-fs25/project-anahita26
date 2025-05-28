@@ -21,9 +21,13 @@ editor: visual
 
 4-5 sentences
 
+Circular fashion is becoming increasingly important as fast fasion industries and incorrect clothing disposal methods are damaging the environment. This report aims to analyze the clothing purchasing and disposal habits of ETH Zurich members and make suggestions on how best promote circular fashion at ETH.
+
 # Methods
 
 3-5 sentences
+
+Data was collected through a survey questionnaire created on Google forms with questions relating to demographics, environmental awareness, clothing purchasing habits, and clothing disposal habits. Responses were collected in the following two ways: 1) through a link shared on WhatsApp to ETH students and 2) through a QR code given out to any ETH members on Polyterrace. A total of 20 responses were recorded and the subsequent raw data was exported in Google sheets. Data cleaning and analysis was done in Quarto using R scripts.
 
 # Results
 
