@@ -4,27 +4,30 @@ date: today
 author:
   - name: Anahita Darvish
     orcid: 0000-0003-2196-5015
-    email: me@web.org
+    email: adarvish@student.ethz.ch
     affiliation: 
       - name: ETH Zurich
         url: https://ethz.ch/de.html
-format:
-  html:
-    embed-resources: true
-    toc: true
+format: html
 execute:
   warning: false
 editor_options: 
   chunk_output_type: console
-bibliography: references.bib
+#bibliography: references.bib
 editor: visual
 ---
 
 # Introduction
 
+4-5 sentences
+
 # Methods
 
+3-5 sentences
+
 # Results
+
+Each figure/table has 2-3 sentences of interpretation
 
 Summary table with statistics
 
@@ -34,13 +37,12 @@ Summary table with statistics
 
 library(tidyverse)
 library(gt)
+library(here)
 
-# Ensure relevant columns are numeric
-data_clean <- data |> 
-  mutate(across(c(new_items, env_conscious, second_hand), as.numeric))
+data <- read_csv(here("data/processed", "clothing_data_cleaned.csv"))
 
 # Compute summary statistics
-summary_table <- data_clean |> 
+summary_table <- data |> 
   summarise(
     Mean = c(mean(new_items, na.rm = TRUE),
              mean(env_conscious, na.rm = TRUE),
@@ -86,8 +88,6 @@ library(tidyverse)
 library(ggplot2)
 library(ggthemes)
 
-data <-  read_csv("data/processed/cloting_data_cleaned.csv")
-
 # Reshape purchasing method columns
 purchasing_long <- data |> 
   pivot_longer(cols = starts_with("get_"),
@@ -110,15 +110,15 @@ ggplot(data = purchasing_long,
   labs(x = "Income (CHF/month)",
        y = "Proportion of Respondents",
        fill = "Acquisition Method")+
-  theme_minimal()
-
+  theme_minimal() +
+  scale_fill_colorblind()
 ```
 
 Data visualization for disposal habits by gender
 
 ```{r}
-#| label: fig-gender
-#| fig-cap: Disposal Habits by Gender
+#| label: fig-continent
+#| fig-cap: Disposal Habits by Continent
 
 # Reshape disposal method columns to long format
 disposal_long <- data |> 
@@ -133,15 +133,30 @@ disposal_long$method <- disposal_long$method |>
   str_replace_all("_", " ") |> 
   str_to_title()
 
-# Plot
-ggplot(disposal_long,
-       mapping = aes(x = gender,
-                     fill = method)) +
-  geom_bar(position = "dodge") +
-  labs(x = "Disposal Method",
-       y = "Number of Respondents",
-       fill = "Gender") +
-  theme_minimal() 
+# Count total number of respondents per continent
+respondents_per_continent <- data |> 
+  group_by(continent) |> 
+  summarise(n_total = n(), .groups = "drop")
+
+# Count yes responses per disposal method per continent
+lollipop_data <- disposal_long |> 
+  group_by(continent, method) |> 
+  summarise(n_yes = n(), .groups = "drop") |> 
+  left_join(respondents_per_continent, by = "continent") |> 
+  mutate(percent = (n_yes / n_total) * 100)
+
+# Plot lollipop chart
+ggplot(lollipop_data, aes(x = percent, y = method, color = continent)) +
+  geom_point(size = 4) +
+  geom_segment(aes(x = 0, xend = percent, y = method, yend = method)) +
+  labs(
+    x = "Percent of Respondents (per Continent)",
+    y = "Disposal Method",
+    color = "Continent"
+  ) +
+  theme_minimal() +
+  scale_color_colorblind()
+
 ```
 
 ```{r}
@@ -208,6 +223,8 @@ data |>
 ```
 
 # Conclusion
+
+Bulleted format
 
 ```{r}
 

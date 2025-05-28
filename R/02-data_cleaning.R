@@ -36,7 +36,11 @@ clothing_data_cleaned <- clothing_data_cleaned |>
   relocate(disposal_textile_center, .after = disposal_trash) |> 
   relocate(email, .after = get_make_clothes)
 
+# Ensure relevant columns are numeric
+clothing_data_cleaned <- clothing_data_cleaned |> 
+  mutate(across(c(new_items, env_conscious, second_hand), as.numeric))
+
 # Export processed data in correct folder
-write_csv(clothing_data_cleaned, "data/processed/cloting_data_cleaned.csv")
+write_csv(clothing_data_cleaned, "data/processed/clothing_data_cleaned.csv")
 
 
