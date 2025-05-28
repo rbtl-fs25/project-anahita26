@@ -29,49 +29,59 @@ editor: visual
 Summary table with statistics
 
 ```{r}
+#| label: tbl-stats
+#| tbl-cap: Summary Statistics of Key Survey Variables
+
 library(tidyverse)
 library(gt)
-library(knitr)
 
-# Convert and clean relevant columns
-data_clean <- data %>%
-  mutate(across(c(new_items, env_conscious), as.numeric))
+# Ensure relevant columns are numeric
+data_clean <- data |> 
+  mutate(across(c(new_items, env_conscious, second_hand), as.numeric))
 
-# Select variables to summarize
-summary_data <- data_clean %>%
+# Compute summary statistics
+summary_table <- data_clean |> 
   summarise(
-    `New Items - Mean` = mean(new_items, na.rm = TRUE),
-    `New Items - Median` = median(new_items, na.rm = TRUE),
-    `New Items - SD` = sd(new_items, na.rm = TRUE),
-    `New Items - Min` = min(new_items, na.rm = TRUE),
-    `New Items - Max` = max(new_items, na.rm = TRUE),
+    Mean = c(mean(new_items, na.rm = TRUE),
+             mean(env_conscious, na.rm = TRUE),
+             mean(second_hand, na.rm = TRUE)),
     
-    `Env Conscious - Mean` = mean(env_conscious, na.rm = TRUE),
-    `Env Conscious - Median` = median(env_conscious, na.rm = TRUE),
-    `Env Conscious - SD` = sd(env_conscious, na.rm = TRUE),
-    `Env Conscious - Min` = min(env_conscious, na.rm = TRUE),
-    `Env Conscious - Max` = max(env_conscious, na.rm = TRUE)
-  ) %>%
-  pivot_longer(cols = everything(),
-               names_to = "Metric", 
-               values_to = "Value")
+    Median = c(median(new_items, na.rm = TRUE),
+               median(env_conscious, na.rm = TRUE),
+               median(second_hand, na.rm = TRUE)),
+    
+    SD = c(sd(new_items, na.rm = TRUE),
+           sd(env_conscious, na.rm = TRUE),
+           sd(second_hand, na.rm = TRUE)),
+    
+    Min = c(min(new_items, na.rm = TRUE),
+            min(env_conscious, na.rm = TRUE),
+            min(second_hand, na.rm = TRUE)),
+    
+    Max = c(max(new_items, na.rm = TRUE),
+            max(env_conscious, na.rm = TRUE),
+            max(second_hand, na.rm = TRUE))
+  ) |> 
+  mutate(Variable = c("New Items Purchased", "Environmental Consciousness", "Percent Second-Hand Purchases")) |> 
+  select(Variable, everything())
 
-# Create a gt table
-summary_data %>%
-  gt() %>%
-  tab_header(
-    title = "Summary Statistics of Key Variables"
-  ) %>%
-  fmt_number(columns = "Value", decimals = 2)
+# Display using gt
+summary_table |> 
+  gt() |> 
+  fmt_number(columns = where(is.numeric), decimals = 2)
+
 
 ```
 
-```{}
+```         
 ```
 
 Data visualization of purchasing habits by income level
 
 ```{r}
+#| label: fig-income
+#| fig-cap: Purchasing Habits by Income Level
+
 library(tidyverse)
 library(ggplot2)
 library(ggthemes)
@@ -107,6 +117,9 @@ ggplot(data = purchasing_long,
 Data visualization for disposal habits by gender
 
 ```{r}
+#| label: fig-gender
+#| fig-cap: Disposal Habits by Gender
+
 # Reshape disposal method columns to long format
 disposal_long <- data |> 
   pivot_longer(cols = starts_with("disposal_"),
