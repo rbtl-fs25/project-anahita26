@@ -27,7 +27,7 @@ Circular fashion is becoming increasingly important as fast fashion industries a
 
 3-5 sentences
 
-Data was collected using a survey questionnaire created in Google Forms, which included questions about demographics, environmental awareness, clothing purchasing habits, and clothing disposal practices. Responses were gathered in two ways: (1) via a link shared on WhatsApp with ETH students, and (2) through a QR code distributed to ETH members on Polyterrace. A total of 20 responses were recorded, and the raw data was exported to Google Sheets. Data cleaning and analysis were conducted in Quarto using R scripts.
+Data was collected using a survey questionnaire created in Google Forms, which included questions about demographics (age, gender, education, income, continent of origin), environmental awareness, clothing purchasing habits, and clothing disposal practices. All clothing purchasing and disposal questions were dichotomous choice questions (yes or no). Responses were gathered in two ways: (1) via a link shared on WhatsApp with ETH students, and (2) through a QR code distributed to ETH members on Polyterrace over a one-hour period. A total of 20 responses were recorded, and the raw data was exported to Google Sheets. Data cleaning and analysis were conducted in Quarto using R scripts.
 
 # Results
 
@@ -37,9 +37,7 @@ Each figure/table has 2-3 sentences of interpretation
 
 Convenience sampling and size of response pool may affect the generalizability of results. Proportions of respondents in each income bracket and continent of origin were not controlled.
 
-Summary table with statistics
-
-@tbl-stats displays key summary statistics of the survey respondents. On average, respondent's purchased 6.4 new clothing items in the last semester, respondents also demonstrated a relatively high value for environmental consciousness with an average value of 3.3 on a scale from 0-5 in which 0 = not environmentall conscious at all and 5 = extrememly environmentally conscious. The average respondent purchased 36.90% second-hand clothing in the past semester, however there was a very high standard deviation in which some responder's purchased 0% second-hand clothing and other purchased 87.5%.
+@tbl-stats displays key summary statistics from the survey. On average, respondents purchased 6.4 new clothing items in the last semester and demonstrated a relatively high level of environmental consciousness, with an average score of 3.3 on a 0–5 scale (0 = not at all environmentally conscious, 5 = extremely conscious). The average share of second-hand clothing purchases was 36.9%, though this varied widely — some respondents reported 0%, while others reported as high as 87.5%, suggesting significant diversity in purchasing behavior.
 
 ```{r}
 #| label: tbl-stats
@@ -85,13 +83,12 @@ summary_table |>
 
 ```
 
-Data visualization of motivations and reasoning
+Before examining respondents’ purchasing and disposal habits in detail, it is equally important to understand why these actions are taken and what the key motivators are. @fig-motivation highlights the most common motivations behind second-hand clothing purchases, as well as the primary reasons respondents choose to dispose of clothing. Interestingly, the majority of participants reported choosing second-hand clothing for its style and uniqueness, rather than for economic or environmental reasons. This suggests that among ETH members, vintage or second-hand fashion is seen as desirable and fashionable, rather than simply practical. On the disposal side, most respondents indicated they part with clothing only when it is damaged or worn out, reflecting a more sustainable attitude in which garments are kept until the end of their useful life, rather than discarded due to changing trends. This aligns with research showing that shifting fashion norms are helping drive the popularity of second-hand clothing among younger, educated populations {}.
 
 ```{r}
 #| label: fig-motivation
 #| fig-cap: Motivations and Disposal Reasons in Clothing Consumption
 
-library(tidyverse)
 library(patchwork)  # for combining plots
 
 # Count motivations
@@ -119,15 +116,12 @@ motivation_plot / disposal_reason_plot
 
 ```
 
-Data visualization of purchasing habits by income level
-
-The effects of income level on purchasing habits are explored in @fig-income. The results demonstrated that thrift and vintage stores are a primary purchasing method amount all the income groups explored. It was also observed that respondent's with over 3000 CHF monthly income were they only income group who did not partake in clothing swaps and were less reliant on hand-me-downs as a clothing aquistion method. This could suggest that high income individuals
+@fig-income explores the effect of income level on clothing acquisition methods. Thrift and vintage stores were widely used across all income groups, highlighting the growing normalization of second-hand fashion. As researcher Ivana Markova from San Francisco State University notes, thrifting has evolved into "a lifestyle for consumers of the urban city", reflecting a cultural shift that extends beyond economic necessity. However, respondents with a monthly income above 3000 CHF were the only group that did not participate in clothing swaps, and they showed less reliance on hand-me-downs compared to lower-income groups. This may suggest that older members of ETH, such as PhD students or faculty, are less engaged with circular fashion practices due to reduced exposure — for example, they may be less likely to see swap flyers on campus or hear about events through peer networks.
 
 ```{r}
 #| label: fig-income
 #| fig-cap: Purchasing Habits by Income Level
 
-library(tidyverse)
 library(ggplot2)
 library(ggthemes)
 
@@ -157,9 +151,7 @@ ggplot(data = purchasing_long,
   scale_fill_colorblind()
 ```
 
-Data visualization for disposal habits by continent
-
-@fig-continent displays clothing disposal methods separated by the respondent's continent of origin. Based on the results, North American respondent's did not use clothing recycling bins or textile recycling centers as a means for disposal, which may suggest a lack of education about the important of textile recycling. Whereas respondents from Asia were least likely to throw clothes away in the regular trash, suggesting they may have a higher education on the subject due to the continent's booming textile industry.
+@fig-continent shows disposal habits by respondents’ continent of origin. North American respondents did not report using clothing recycling bins or textile recycling centers, which may suggest lower awareness of textile recycling infrastructure. In contrast, respondents from Asia were least likely to dispose of clothing via regular trash, potentially indicating greater awareness of textile waste or cultural practices influenced by the region’s prominent role in the global textile industry. This aligns with global findings, where China stands out for its progress in circular economy efforts, while the USA struggles to translate awareness into action {Gonella}.
 
 ```{r}
 #| label: fig-continent
@@ -204,6 +196,7 @@ ggplot(lollipop_data, aes(x = percent, y = method, color = continent)) +
 
 ```
 
+Initial data editing code chunks.
 
 ```{r}
 # Create data frame with each disposal method and initialize percentage
@@ -253,7 +246,6 @@ new_clothes_df <- data.frame(
 new_clothes_df[1, "buyers_percentage"] <- sum(data$new_clothes == "yes") / count(data) * 100
 new_clothes_df[1, "brand_sust_percentage"] <-  sum(brand_sust_filtered$brand_sust == "yes") / count(brand_sust_filtered) * 100
 ```
-
 
 # Conclusions
 
