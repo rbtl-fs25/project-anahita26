@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Anahita Darvish">
-<meta name="dcterms.date" content="2025-05-28">
+<meta name="dcterms.date" content="2025-05-30">
 
 <title>Clothing Purchasing and Disposal Habits of ETH Zurich Members</title>
 <style>
@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 28, 2025</p>
+      <p class="date">May 30, 2025</p>
     </div>
   </div>
   
@@ -124,15 +124,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>4-5 sentences</p>
+<p>Circular fashion is becoming increasingly important as fast fashion industries and incorrect clothing disposal methods are damaging the environment. This report aims to analyze the clothing purchasing and disposal habits of ETH Zurich members and make suggestions on how best promote circular fashion at ETH.</p>
 </section>
 <section id="methods" class="level1">
 <h1>Methods</h1>
 <p>3-5 sentences</p>
+<p>Data was collected through a survey questionnaire created on Google forms with questions relating to demographics, environmental awareness, clothing purchasing habits, and clothing disposal habits. Responses were collected in the following two ways: 1) through a link shared on WhatsApp to ETH students and 2) through a QR code given out to any ETH members on Polyterrace. A total of 20 responses were recorded and the subsequent raw data was exported into Google sheets. Data cleaning and analysis was completed in Quarto using R scripts.</p>
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
 <p>Each figure/table has 2-3 sentences of interpretation</p>
+<section id="study-limitations" class="level2">
+<h2 class="anchored" data-anchor-id="study-limitations">Study limitations</h2>
+<p>Convenience sampling and size of response pool may affect the generalizability of results. Proportions of respondents in each income bracket and continent of origin were not controlled.</p>
 <p>Summary table with statistics</p>
+<p><a href="#tbl-stats" class="quarto-xref">Table&nbsp;1</a> displays key summary statistics of the survey respondents. On average, respondent’s purchased 6.4 new clothing items in the last semester, respondents also demonstrated a relatively high value for environmental consciousness with an average value of 3.3 on a scale from 0-5 in which 0 = not environmentall conscious at all and 5 = extrememly environmentally conscious. The average respondent purchased 36.90% second-hand clothing in the past semester, however there was a very high standard deviation in which some responder’s purchased 0% second-hand clothing and other purchased 87.5%.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
@@ -177,23 +183,23 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
 </figcaption>
 <div aria-describedby="tbl-stats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="ogbpmcyagd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ogbpmcyagd table {
+<div id="ryaajlluio" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ryaajlluio table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ogbpmcyagd thead, #ogbpmcyagd tbody, #ogbpmcyagd tfoot, #ogbpmcyagd tr, #ogbpmcyagd td, #ogbpmcyagd th {
+#ryaajlluio thead, #ryaajlluio tbody, #ryaajlluio tfoot, #ryaajlluio tr, #ryaajlluio td, #ryaajlluio th {
   border-style: none;
 }
 
-#ogbpmcyagd p {
+#ryaajlluio p {
   margin: 0;
   padding: 0;
 }
 
-#ogbpmcyagd .gt_table {
+#ryaajlluio .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -219,12 +225,12 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-left-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_caption {
+#ryaajlluio .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ogbpmcyagd .gt_title {
+#ryaajlluio .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -236,7 +242,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-width: 0;
 }
 
-#ogbpmcyagd .gt_subtitle {
+#ryaajlluio .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -248,7 +254,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-top-width: 0;
 }
 
-#ogbpmcyagd .gt_heading {
+#ryaajlluio .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -260,13 +266,13 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_bottom_border {
+#ryaajlluio .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_col_headings {
+#ryaajlluio .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -281,7 +287,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_col_heading {
+#ryaajlluio .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -301,7 +307,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   overflow-x: hidden;
 }
 
-#ogbpmcyagd .gt_column_spanner_outer {
+#ryaajlluio .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -313,15 +319,15 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 4px;
 }
 
-#ogbpmcyagd .gt_column_spanner_outer:first-child {
+#ryaajlluio .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ogbpmcyagd .gt_column_spanner_outer:last-child {
+#ryaajlluio .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ogbpmcyagd .gt_column_spanner {
+#ryaajlluio .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -333,11 +339,11 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   width: 100%;
 }
 
-#ogbpmcyagd .gt_spanner_row {
+#ryaajlluio .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ogbpmcyagd .gt_group_heading {
+#ryaajlluio .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -363,7 +369,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   text-align: left;
 }
 
-#ogbpmcyagd .gt_empty_group_heading {
+#ryaajlluio .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -378,15 +384,15 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   vertical-align: middle;
 }
 
-#ogbpmcyagd .gt_from_md > :first-child {
+#ryaajlluio .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ogbpmcyagd .gt_from_md > :last-child {
+#ryaajlluio .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ogbpmcyagd .gt_row {
+#ryaajlluio .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -405,7 +411,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   overflow-x: hidden;
 }
 
-#ogbpmcyagd .gt_stub {
+#ryaajlluio .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -418,7 +424,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#ogbpmcyagd .gt_stub_row_group {
+#ryaajlluio .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -432,15 +438,15 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   vertical-align: top;
 }
 
-#ogbpmcyagd .gt_row_group_first td {
+#ryaajlluio .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ogbpmcyagd .gt_row_group_first th {
+#ryaajlluio .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ogbpmcyagd .gt_summary_row {
+#ryaajlluio .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -450,16 +456,16 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#ogbpmcyagd .gt_first_summary_row {
+#ryaajlluio .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_first_summary_row.thick {
+#ryaajlluio .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ogbpmcyagd .gt_last_summary_row {
+#ryaajlluio .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -469,7 +475,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_grand_summary_row {
+#ryaajlluio .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -479,7 +485,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#ogbpmcyagd .gt_first_grand_summary_row {
+#ryaajlluio .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -489,7 +495,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-top-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_last_grand_summary_row_top {
+#ryaajlluio .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -499,11 +505,11 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_striped {
+#ryaajlluio .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ogbpmcyagd .gt_table_body {
+#ryaajlluio .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -512,7 +518,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_footnotes {
+#ryaajlluio .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -526,7 +532,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_footnote {
+#ryaajlluio .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -535,7 +541,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#ogbpmcyagd .gt_sourcenotes {
+#ryaajlluio .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -549,7 +555,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#ogbpmcyagd .gt_sourcenote {
+#ryaajlluio .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -557,72 +563,72 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#ogbpmcyagd .gt_left {
+#ryaajlluio .gt_left {
   text-align: left;
 }
 
-#ogbpmcyagd .gt_center {
+#ryaajlluio .gt_center {
   text-align: center;
 }
 
-#ogbpmcyagd .gt_right {
+#ryaajlluio .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ogbpmcyagd .gt_font_normal {
+#ryaajlluio .gt_font_normal {
   font-weight: normal;
 }
 
-#ogbpmcyagd .gt_font_bold {
+#ryaajlluio .gt_font_bold {
   font-weight: bold;
 }
 
-#ogbpmcyagd .gt_font_italic {
+#ryaajlluio .gt_font_italic {
   font-style: italic;
 }
 
-#ogbpmcyagd .gt_super {
+#ryaajlluio .gt_super {
   font-size: 65%;
 }
 
-#ogbpmcyagd .gt_footnote_marks {
+#ryaajlluio .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ogbpmcyagd .gt_asterisk {
+#ryaajlluio .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ogbpmcyagd .gt_indent_1 {
+#ryaajlluio .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ogbpmcyagd .gt_indent_2 {
+#ryaajlluio .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ogbpmcyagd .gt_indent_3 {
+#ryaajlluio .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ogbpmcyagd .gt_indent_4 {
+#ryaajlluio .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ogbpmcyagd .gt_indent_5 {
+#ryaajlluio .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ogbpmcyagd .katex-display {
+#ryaajlluio .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ogbpmcyagd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ryaajlluio div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -674,6 +680,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
 </div>
 <pre><code></code></pre>
 <p>Data visualization of purchasing habits by income level</p>
+<p>The effects of income level on purchasing habits are explored in <a href="#fig-income" class="quarto-xref">Figure&nbsp;1</a>. The results demonstrated that thrift and vintage stores are a primary purchasing method amount all the income groups explored. It was also observed that respondent’s with over 3000 CHF monthly income were they only income group who did not partake in clothing swaps and were less reliant on hand-me-downs as a clothing aquistion method. This could suggest that high income individuals</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -701,7 +708,8 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Income (CHF/month)"</span>,</span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Proportion of Respondents"</span>,</span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Acquisition Method"</span>)<span class="sc">+</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-income" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -715,7 +723,8 @@ Figure&nbsp;1: Purchasing Habits by Income Level
 </div>
 </div>
 </div>
-<p>Data visualization for disposal habits by gender</p>
+<p>Data visualization for disposal habits by continent</p>
+<p><a href="#fig-continent" class="quarto-xref">Figure&nbsp;2</a> displays clothing disposal methods separated by the respondent’s continent of origin. Based on the results, North American respondent’s did not use clothing recycling bins or textile recycling centers as a means for disposal, which may suggest a lack of education about the important of textile recycling. Whereas respondents from Asia were least likely to throw clothes away in the regular trash, suggesting they may have a higher education on the subject due to the continent’s booming textile industry.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape disposal method columns to long format</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>disposal_long <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
@@ -730,23 +739,37 @@ Figure&nbsp;1: Purchasing Habits by Income Level
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_replace_all</span>(<span class="st">"_"</span>, <span class="st">" "</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_to_title</span>()</span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(disposal_long,</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> gender,</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                     <span class="at">fill =</span> method)) <span class="sc">+</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Disposal Method"</span>,</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Number of Respondents"</span>,</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Disposal Method"</span>) <span class="sc">+</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Count total number of respondents per continent</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>respondents_per_continent <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(continent) <span class="sc">|&gt;</span> </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n_total =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Count yes responses per disposal method per continent</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>lollipop_data <span class="ot">&lt;-</span> disposal_long <span class="sc">|&gt;</span> </span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(continent, method) <span class="sc">|&gt;</span> </span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n_yes =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(respondents_per_continent, <span class="at">by =</span> <span class="st">"continent"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> (n_yes <span class="sc">/</span> n_total) <span class="sc">*</span> <span class="dv">100</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot lollipop chart</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(lollipop_data, <span class="fu">aes</span>(<span class="at">x =</span> percent, <span class="at">y =</span> method, <span class="at">color =</span> continent)) <span class="sc">+</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> percent, <span class="at">y =</span> method, <span class="at">yend =</span> method)) <span class="sc">+</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Percent of Respondents (per Continent)"</span>,</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Disposal Method"</span>,</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Continent"</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-gender" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-continent" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-gender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-gender-1.png" class="img-fluid figure-img" width="672">
+<div aria-describedby="fig-continent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-continent-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Disposal Habits by Gender
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-continent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Disposal Habits by Continent
 </figcaption>
 </figure>
 </div>
@@ -834,9 +857,15 @@ Figure&nbsp;2: Disposal Habits by Gender
 </div>
 </div>
 </section>
-<section id="conclusion" class="level1">
-<h1>Conclusion</h1>
-<p>Bulleted format</p>
+</section>
+<section id="conclusions" class="level1">
+<h1>Conclusions</h1>
+<ul>
+<li><p>Second-hand shopping is becoming increasingly popular amoung all income groups</p></li>
+<li><p>Higher income individuals are less likely to participate in clothing swaps and recieve hand-me-downs</p></li>
+<li><p>North Americans lack education over proper clothing disposal habits</p></li>
+<li></li>
+</ul>
 </section>
 
 </main>

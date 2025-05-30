@@ -21,19 +21,25 @@ editor: visual
 
 4-5 sentences
 
-Circular fashion is becoming increasingly important as fast fasion industries and incorrect clothing disposal methods are damaging the environment. This report aims to analyze the clothing purchasing and disposal habits of ETH Zurich members and make suggestions on how best promote circular fashion at ETH.
+Circular fashion is becoming increasingly important as fast fashion industries and incorrect clothing disposal methods are damaging the environment. This report aims to analyze the clothing purchasing and disposal habits of ETH Zurich members and make suggestions on how best promote circular fashion at ETH.
 
 # Methods
 
 3-5 sentences
 
-Data was collected through a survey questionnaire created on Google forms with questions relating to demographics, environmental awareness, clothing purchasing habits, and clothing disposal habits. Responses were collected in the following two ways: 1) through a link shared on WhatsApp to ETH students and 2) through a QR code given out to any ETH members on Polyterrace. A total of 20 responses were recorded and the subsequent raw data was exported in Google sheets. Data cleaning and analysis was done in Quarto using R scripts.
+Data was collected using a survey questionnaire created in Google Forms, which included questions about demographics, environmental awareness, clothing purchasing habits, and clothing disposal practices. Responses were gathered in two ways: (1) via a link shared on WhatsApp with ETH students, and (2) through a QR code distributed to ETH members on Polyterrace. A total of 20 responses were recorded, and the raw data was exported to Google Sheets. Data cleaning and analysis were conducted in Quarto using R scripts.
 
 # Results
 
 Each figure/table has 2-3 sentences of interpretation
 
+## Study limitations
+
+Convenience sampling and size of response pool may affect the generalizability of results. Proportions of respondents in each income bracket and continent of origin were not controlled.
+
 Summary table with statistics
+
+@tbl-stats displays key summary statistics of the survey respondents. On average, respondent's purchased 6.4 new clothing items in the last semester, respondents also demonstrated a relatively high value for environmental consciousness with an average value of 3.3 on a scale from 0-5 in which 0 = not environmentall conscious at all and 5 = extrememly environmentally conscious. The average respondent purchased 36.90% second-hand clothing in the past semester, however there was a very high standard deviation in which some responder's purchased 0% second-hand clothing and other purchased 87.5%.
 
 ```{r}
 #| label: tbl-stats
@@ -84,6 +90,8 @@ summary_table |>
 
 Data visualization of purchasing habits by income level
 
+The effects of income level on purchasing habits are explored in @fig-income. The results demonstrated that thrift and vintage stores are a primary purchasing method amount all the income groups explored. It was also observed that respondent's with over 3000 CHF monthly income were they only income group who did not partake in clothing swaps and were less reliant on hand-me-downs as a clothing aquistion method. This could suggest that high income individuals
+
 ```{r}
 #| label: fig-income
 #| fig-cap: Purchasing Habits by Income Level
@@ -118,7 +126,9 @@ ggplot(data = purchasing_long,
   scale_fill_colorblind()
 ```
 
-Data visualization for disposal habits by gender
+Data visualization for disposal habits by continent
+
+@fig-continent displays clothing disposal methods separated by the respondent's continent of origin. Based on the results, North American respondent's did not use clothing recycling bins or textile recycling centers as a means for disposal, which may suggest a lack of education about the important of textile recycling. Whereas respondents from Asia were least likely to throw clothes away in the regular trash, suggesting they may have a higher education on the subject due to the continent's booming textile industry.
 
 ```{r}
 #| label: fig-continent
@@ -226,9 +236,15 @@ data |>
   count(disposal_reason)
 ```
 
-# Conclusion
+# Conclusions
 
-Bulleted format
+-   Second-hand shopping is becoming increasingly popular amoung all income groups
+
+-   Higher income individuals are less likely to participate in clothing swaps and recieve hand-me-downs
+
+-   North Americans lack education over proper clothing disposal habits
+
+-   
 
 ```{r}
 
