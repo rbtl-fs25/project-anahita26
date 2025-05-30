@@ -85,7 +85,38 @@ summary_table |>
 
 ```
 
-```         
+Data visualization of motivations and reasoning
+
+```{r}
+#| label: fig-motivation
+#| fig-cap: Motivations and Disposal Reasons in Clothing Consumption
+
+library(tidyverse)
+library(patchwork)  # for combining plots
+
+# Count motivations
+motivation_plot <- data %>%
+  count(motivation) %>%
+  ggplot(aes(x = fct_reorder(motivation, n), y = n)) +
+  geom_col(fill = "#56B4E9") +
+  coord_flip() +
+  labs(title = "Motivations for Purchasing Second-Hand",
+       x = NULL, y = "Number of Respondents") +
+  theme_minimal()
+
+# Count disposal reasons
+disposal_reason_plot <- data %>%
+  count(disposal_reason) %>%
+  ggplot(aes(x = fct_reorder(disposal_reason, n), y = n)) +
+  geom_col(fill = "#E69F00") +
+  coord_flip() +
+  labs(title = "Reasons for Disposing of Clothing",
+       x = NULL, y = "Number of Respondents") +
+  theme_minimal()
+
+# Combine them stacked
+motivation_plot / disposal_reason_plot
+
 ```
 
 Data visualization of purchasing habits by income level
@@ -173,6 +204,7 @@ ggplot(lollipop_data, aes(x = percent, y = method, color = continent)) +
 
 ```
 
+
 ```{r}
 # Create data frame with each disposal method and initialize percentage
 disposal_habits_df <- data.frame(
@@ -222,19 +254,6 @@ new_clothes_df[1, "buyers_percentage"] <- sum(data$new_clothes == "yes") / count
 new_clothes_df[1, "brand_sust_percentage"] <-  sum(brand_sust_filtered$brand_sust == "yes") / count(brand_sust_filtered) * 100
 ```
 
-```{r}
-# Mean percentage of second hand clothing purchases
-second_hand_purchases_percentage <- mean(data$second_hand)
-
-data |> 
-  count(motivation)
-
-data |> 
-  count(disposal)
-
-data |> 
-  count(disposal_reason)
-```
 
 # Conclusions
 
@@ -245,7 +264,3 @@ data |>
 -   North Americans lack education over proper clothing disposal habits
 
 -   
-
-```{r}
-
-```
