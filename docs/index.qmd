@@ -9,6 +9,7 @@ author:
       - name: ETH Zurich
         url: https://ethz.ch/de.html
 format: html
+toc: true
 execute:
   warning: false
 editor_options: 
@@ -19,23 +20,17 @@ editor: visual
 
 # Introduction
 
-4-5 sentences
+Textile waste has become an enormous burden on the environment as fast fasion industries have risen in popularity. The low-price, trendy clothing offered by fast fashion industries, including ZARA and H&M, are produced with lower quality materials leading to shorter clothing lifetimes and larger amounts of textile waste. Circular fashion, including the reuse and recycling of clothing, is the key to combatting this issue. This report aims to answer the following research question:
 
-Circular fashion is becoming increasingly important as fast fashion industries and incorrect clothing disposal methods are damaging the environment. This report aims to analyze the clothing purchasing and disposal habits of ETH Zurich members and make suggestions on how best promote circular fashion at ETH.
+What are the clothing disposal habits of ETH Zurich students, and how are they influenced by their clothing consumption patterns (new vs second-hand) during the past semester?
+
+By analyzing the clothing purchasing and disposal behaviors of ETH Zurich members, recommendations for the promotion of a circular fashion mindset at ETH can be made.
 
 # Methods
-
-3-5 sentences
 
 Data was collected using a survey questionnaire created in Google Forms, which included questions about demographics (age, gender, education, income, continent of origin), environmental awareness, clothing purchasing habits, and clothing disposal practices. All clothing purchasing and disposal questions were dichotomous choice questions (yes or no). Responses were gathered in two ways: (1) via a link shared on WhatsApp with ETH students, and (2) through a QR code distributed to ETH members on Polyterrace over a one-hour period. A total of 20 responses were recorded, and the raw data was exported to Google Sheets. Data cleaning and analysis were conducted in Quarto using R scripts.
 
 # Results
-
-Each figure/table has 2-3 sentences of interpretation
-
-## Study limitations
-
-Convenience sampling and size of response pool may affect the generalizability of results. Proportions of respondents in each income bracket and continent of origin were not controlled.
 
 @tbl-stats displays key summary statistics from the survey. On average, respondents purchased 6.4 new clothing items in the last semester and demonstrated a relatively high level of environmental consciousness, with an average score of 3.3 on a 0–5 scale (0 = not at all environmentally conscious, 5 = extremely conscious). The average share of second-hand clothing purchases was 36.9%, though this varied widely — some respondents reported 0%, while others reported as high as 87.5%, suggesting significant diversity in purchasing behavior.
 
@@ -83,7 +78,7 @@ summary_table |>
 
 ```
 
-Before examining respondents’ purchasing and disposal habits in detail, it is equally important to understand why these actions are taken and what the key motivators are. @fig-motivation highlights the most common motivations behind second-hand clothing purchases, as well as the primary reasons respondents choose to dispose of clothing. Interestingly, the majority of participants reported choosing second-hand clothing for its style and uniqueness, rather than for economic or environmental reasons. This suggests that among ETH members, vintage or second-hand fashion is seen as desirable and fashionable, rather than simply practical. On the disposal side, most respondents indicated they part with clothing only when it is damaged or worn out, reflecting a more sustainable attitude in which garments are kept until the end of their useful life, rather than discarded due to changing trends. This aligns with research showing that shifting fashion norms are helping drive the popularity of second-hand clothing among younger, educated populations {}.
+@fig-motivation highlights the most common motivations behind second-hand clothing purchases, as well as the primary reasons for clothing disposal. Interestingly, the majority of participants reported choosing second-hand clothing for its style and uniqueness, rather than for economic or environmental reasons. Implying that among ETH members, vintage or second-hand clothing is seen as fashionable, rather than simply practical. This aligns with research showing that shifting fashion norms are helping drive the popularity of second-hand clothing among younger, educated populations {Ferraro}. On the disposal side, most respondents indicated they discard clothing only when it is damaged or worn out, reflecting a more sustainable attitude in which garments are kept until the end of their useful life, rather than discarded due to changing trends.
 
 ```{r}
 #| label: fig-motivation
@@ -255,4 +250,8 @@ new_clothes_df[1, "brand_sust_percentage"] <-  sum(brand_sust_filtered$brand_sus
 
 -   North Americans lack education over proper clothing disposal habits
 
--   
+Study limitations:
+
+Convenience sampling and size of response pool may affect the generalizability of results. Proportions of respondents in each income bracket and continent of origin were not controlled.
+
+# References
