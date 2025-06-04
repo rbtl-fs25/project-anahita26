@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Anahita Darvish">
-<meta name="dcterms.date" content="2025-05-30">
+<meta name="dcterms.date" content="2025-06-04">
 
 <title>Clothing Purchasing and Disposal Habits of ETH Zurich Members</title>
 <style>
@@ -57,7 +57,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
@@ -75,10 +95,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -109,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 30, 2025</p>
+      <p class="date">June 4, 2025</p>
     </div>
   </div>
   
@@ -123,20 +155,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>4-5 sentences</p>
-<p>Circular fashion is becoming increasingly important as fast fashion industries and incorrect clothing disposal methods are damaging the environment. This report aims to analyze the clothing purchasing and disposal habits of ETH Zurich members and make suggestions on how best promote circular fashion at ETH.</p>
+<p>Textile waste has become an enormous burden on the environment as fast fasion industries have risen in popularity. The low-price, trendy clothing offered by fast fashion industries, including ZARA and H&amp;M, are produced with lower quality materials leading to shorter clothing lifetimes and larger amounts of textile waste. Circular fashion, including the reuse and recycling of clothing, is the key to combatting this issue. This report aims to answer the following research question:</p>
+<p>What are the clothing disposal habits of ETH Zurich students, and how are they influenced by their clothing consumption patterns (new vs second-hand) during the past semester?</p>
+<p>By analyzing the clothing purchasing and disposal behaviors of ETH Zurich members, recommendations for the promotion of a circular fashion mindset at ETH can be made.</p>
 </section>
 <section id="methods" class="level1">
 <h1>Methods</h1>
-<p>3-5 sentences</p>
 <p>Data was collected using a survey questionnaire created in Google Forms, which included questions about demographics (age, gender, education, income, continent of origin), environmental awareness, clothing purchasing habits, and clothing disposal practices. All clothing purchasing and disposal questions were dichotomous choice questions (yes or no). Responses were gathered in two ways: (1) via a link shared on WhatsApp with ETH students, and (2) through a QR code distributed to ETH members on Polyterrace over a one-hour period. A total of 20 responses were recorded, and the raw data was exported to Google Sheets. Data cleaning and analysis were conducted in Quarto using R scripts.</p>
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
-<p>Each figure/table has 2-3 sentences of interpretation</p>
-<section id="study-limitations" class="level2">
-<h2 class="anchored" data-anchor-id="study-limitations">Study limitations</h2>
-<p>Convenience sampling and size of response pool may affect the generalizability of results. Proportions of respondents in each income bracket and continent of origin were not controlled.</p>
 <p><a href="#tbl-stats" class="quarto-xref">Table&nbsp;1</a> displays key summary statistics from the survey. On average, respondents purchased 6.4 new clothing items in the last semester and demonstrated a relatively high level of environmental consciousness, with an average score of 3.3 on a 0–5 scale (0 = not at all environmentally conscious, 5 = extremely conscious). The average share of second-hand clothing purchases was 36.9%, though this varied widely — some respondents reported 0%, while others reported as high as 87.5%, suggesting significant diversity in purchasing behavior.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -182,23 +210,23 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
 </figcaption>
 <div aria-describedby="tbl-stats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="kmwetokipd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kmwetokipd table {
+<div id="faixvtpbki" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#faixvtpbki table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kmwetokipd thead, #kmwetokipd tbody, #kmwetokipd tfoot, #kmwetokipd tr, #kmwetokipd td, #kmwetokipd th {
+#faixvtpbki thead, #faixvtpbki tbody, #faixvtpbki tfoot, #faixvtpbki tr, #faixvtpbki td, #faixvtpbki th {
   border-style: none;
 }
 
-#kmwetokipd p {
+#faixvtpbki p {
   margin: 0;
   padding: 0;
 }
 
-#kmwetokipd .gt_table {
+#faixvtpbki .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -224,12 +252,12 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-left-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_caption {
+#faixvtpbki .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kmwetokipd .gt_title {
+#faixvtpbki .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -241,7 +269,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-width: 0;
 }
 
-#kmwetokipd .gt_subtitle {
+#faixvtpbki .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -253,7 +281,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-top-width: 0;
 }
 
-#kmwetokipd .gt_heading {
+#faixvtpbki .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -265,13 +293,13 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_bottom_border {
+#faixvtpbki .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_col_headings {
+#faixvtpbki .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -286,7 +314,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_col_heading {
+#faixvtpbki .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -306,7 +334,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   overflow-x: hidden;
 }
 
-#kmwetokipd .gt_column_spanner_outer {
+#faixvtpbki .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -318,15 +346,15 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 4px;
 }
 
-#kmwetokipd .gt_column_spanner_outer:first-child {
+#faixvtpbki .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kmwetokipd .gt_column_spanner_outer:last-child {
+#faixvtpbki .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kmwetokipd .gt_column_spanner {
+#faixvtpbki .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -338,11 +366,11 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   width: 100%;
 }
 
-#kmwetokipd .gt_spanner_row {
+#faixvtpbki .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kmwetokipd .gt_group_heading {
+#faixvtpbki .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -368,7 +396,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   text-align: left;
 }
 
-#kmwetokipd .gt_empty_group_heading {
+#faixvtpbki .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -383,15 +411,15 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   vertical-align: middle;
 }
 
-#kmwetokipd .gt_from_md > :first-child {
+#faixvtpbki .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kmwetokipd .gt_from_md > :last-child {
+#faixvtpbki .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kmwetokipd .gt_row {
+#faixvtpbki .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -410,7 +438,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   overflow-x: hidden;
 }
 
-#kmwetokipd .gt_stub {
+#faixvtpbki .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -423,7 +451,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#kmwetokipd .gt_stub_row_group {
+#faixvtpbki .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -437,15 +465,15 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   vertical-align: top;
 }
 
-#kmwetokipd .gt_row_group_first td {
+#faixvtpbki .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kmwetokipd .gt_row_group_first th {
+#faixvtpbki .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kmwetokipd .gt_summary_row {
+#faixvtpbki .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -455,16 +483,16 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#kmwetokipd .gt_first_summary_row {
+#faixvtpbki .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_first_summary_row.thick {
+#faixvtpbki .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kmwetokipd .gt_last_summary_row {
+#faixvtpbki .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -474,7 +502,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_grand_summary_row {
+#faixvtpbki .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -484,7 +512,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#kmwetokipd .gt_first_grand_summary_row {
+#faixvtpbki .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -494,7 +522,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-top-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_last_grand_summary_row_top {
+#faixvtpbki .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -504,11 +532,11 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_striped {
+#faixvtpbki .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kmwetokipd .gt_table_body {
+#faixvtpbki .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -517,7 +545,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_footnotes {
+#faixvtpbki .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -531,7 +559,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_footnote {
+#faixvtpbki .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -540,7 +568,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#kmwetokipd .gt_sourcenotes {
+#faixvtpbki .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -554,7 +582,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#kmwetokipd .gt_sourcenote {
+#faixvtpbki .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -562,72 +590,72 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#kmwetokipd .gt_left {
+#faixvtpbki .gt_left {
   text-align: left;
 }
 
-#kmwetokipd .gt_center {
+#faixvtpbki .gt_center {
   text-align: center;
 }
 
-#kmwetokipd .gt_right {
+#faixvtpbki .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kmwetokipd .gt_font_normal {
+#faixvtpbki .gt_font_normal {
   font-weight: normal;
 }
 
-#kmwetokipd .gt_font_bold {
+#faixvtpbki .gt_font_bold {
   font-weight: bold;
 }
 
-#kmwetokipd .gt_font_italic {
+#faixvtpbki .gt_font_italic {
   font-style: italic;
 }
 
-#kmwetokipd .gt_super {
+#faixvtpbki .gt_super {
   font-size: 65%;
 }
 
-#kmwetokipd .gt_footnote_marks {
+#faixvtpbki .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kmwetokipd .gt_asterisk {
+#faixvtpbki .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kmwetokipd .gt_indent_1 {
+#faixvtpbki .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kmwetokipd .gt_indent_2 {
+#faixvtpbki .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kmwetokipd .gt_indent_3 {
+#faixvtpbki .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kmwetokipd .gt_indent_4 {
+#faixvtpbki .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kmwetokipd .gt_indent_5 {
+#faixvtpbki .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kmwetokipd .katex-display {
+#faixvtpbki .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kmwetokipd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#faixvtpbki div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -677,33 +705,36 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
 </figure>
 </div>
 </div>
-<p>Before examining respondents’ purchasing and disposal habits in detail, it is equally important to understand why these actions are taken and what the key motivators are. <a href="#fig-motivation" class="quarto-xref">Figure&nbsp;1</a> highlights the most common motivations behind second-hand clothing purchases, as well as the primary reasons respondents choose to dispose of clothing. Interestingly, the majority of participants reported choosing second-hand clothing for its style and uniqueness, rather than for economic or environmental reasons. This suggests that among ETH members, vintage or second-hand fashion is seen as desirable and fashionable, rather than simply practical. On the disposal side, most respondents indicated they part with clothing only when it is damaged or worn out, reflecting a more sustainable attitude in which garments are kept until the end of their useful life, rather than discarded due to changing trends. This aligns with research showing that shifting fashion norms are helping drive the popularity of second-hand clothing among younger, educated populations {}.</p>
+<p><a href="#fig-motivation" class="quarto-xref">Figure&nbsp;1</a> highlights the most common motivations behind second-hand clothing purchases, as well as the primary reasons for clothing disposal by respondent’s age. Interestingly, the majority of younger participants reported choosing second-hand clothing for its style and uniqueness, rather than for economic or environmental reasons. Implying that among ETH members, vintage or second-hand clothing is seen as fashionable, rather than simply practical. This aligns with research showing that shifting fashion norms are helping drive the popularity of second-hand clothing among younger, educated populations <span class="citation" data-cites="ferraro2016">(<a href="#ref-ferraro2016" role="doc-biblioref">Ferraro, Sands, and Brace-Govan 2016</a>)</span>. On the disposal side, most respondents indicated they discard clothing only when it is damaged or worn out, reflecting a more sustainable attitude in which garments are kept until the end of their useful life, rather than discarded due to changing trends.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)  <span class="co"># for combining plots</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Count motivations</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>motivation_plot <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(motivation) <span class="sc">%&gt;%</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(motivation, n), <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#56B4E9"</span>) <span class="sc">+</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Motivations for Purchasing Second-Hand"</span>,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Number of Respondents"</span>) <span class="sc">+</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Count disposal reasons</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>disposal_reason_plot <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(disposal_reason) <span class="sc">%&gt;%</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(disposal_reason, n), <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#E69F00"</span>) <span class="sc">+</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Reasons for Disposing of Clothing"</span>,</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Number of Respondents"</span>) <span class="sc">+</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine them stacked</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>motivation_plot <span class="sc">/</span> disposal_reason_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)  <span class="co"># for combining plots</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Count motivations</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>motivation_plot <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(motivation, age) <span class="sc">%&gt;%</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(motivation, n), </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                       <span class="at">y =</span> n,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">fill =</span> age)) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Motivations for Purchasing Second-Hand"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Number of Respondents"</span>) <span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Count disposal reasons</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>disposal_reason_plot <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(disposal_reason, age) <span class="sc">%&gt;%</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(disposal_reason, n), </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>                       <span class="at">y =</span> n,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                       <span class="at">fill =</span> age)) <span class="sc">+</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Reasons for Disposing of Clothing"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Number of Respondents"</span>) <span class="sc">+</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine them stacked</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>motivation_plot <span class="sc">/</span> disposal_reason_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-motivation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -717,36 +748,35 @@ Figure&nbsp;1: Motivations and Disposal Reasons in Clothing Consumption
 </div>
 </div>
 </div>
-<p><a href="#fig-income" class="quarto-xref">Figure&nbsp;2</a> explores the effect of income level on clothing acquisition methods. Thrift and vintage stores were widely used across all income groups, highlighting the growing normalization of second-hand fashion. As researcher Ivana Markova from San Francisco State University notes, thrifting has evolved into “a lifestyle for consumers of the urban city”, reflecting a cultural shift that extends beyond economic necessity. However, respondents with a monthly income above 3000 CHF were the only group that did not participate in clothing swaps, and they showed less reliance on hand-me-downs compared to lower-income groups. This may suggest that older members of ETH, such as PhD students or faculty, are less engaged with circular fashion practices due to reduced exposure — for example, they may be less likely to see swap flyers on campus or hear about events through peer networks.</p>
+<p><a href="#fig-income" class="quarto-xref">Figure&nbsp;2</a> explores the effect of income level on clothing acquisition methods. Thrift and vintage stores were widely used across all income groups, highlighting the growing normalization of second-hand fashion. In <span class="citation" data-cites="markova2018">Ivana Markova and Julia Grajeda (<a href="#ref-markova2018" role="doc-biblioref">2018</a>)</span> the authors describe how thrifting has evolved into “a lifestyle for consumers of the urban city”, reflecting a cultural shift that extends beyond economic necessity. However, respondents with a monthly income above 3000 CHF were the only group that did not participate in clothing swaps, and they showed less reliance on hand-me-downs compared to lower-income groups. This may suggest that older members of ETH, such as PhD students or faculty, are less engaged with circular fashion practices due to reduced exposure — for example, they may be less likely to see swap flyers on campus or hear about events through peer networks.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape purchasing method columns</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>purchasing_long <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"get_"</span>),</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"method"</span>,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(response <span class="sc">==</span> <span class="st">"yes"</span>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean method labels</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>purchasing_long<span class="sc">$</span>method <span class="ot">&lt;-</span> purchasing_long<span class="sc">$</span>method <span class="sc">|&gt;</span> </span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_replace</span>(<span class="st">"get_"</span>, <span class="st">""</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_replace_all</span>(<span class="st">"_"</span>, <span class="st">" "</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_to_title</span>()</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> purchasing_long, </span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> income,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                     <span class="at">fill =</span> method)) <span class="sc">+</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)<span class="sc">+</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Income (CHF/month)"</span>,</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Proportion of Respondents"</span>,</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Acquisition Method"</span>)<span class="sc">+</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape purchasing method columns</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>purchasing_long <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"get_"</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"method"</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(response <span class="sc">==</span> <span class="st">"yes"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean method labels</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>purchasing_long<span class="sc">$</span>method <span class="ot">&lt;-</span> purchasing_long<span class="sc">$</span>method <span class="sc">|&gt;</span> </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_replace</span>(<span class="st">"get_"</span>, <span class="st">""</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_replace_all</span>(<span class="st">"_"</span>, <span class="st">" "</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">str_to_title</span>()</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> purchasing_long, </span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> income,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                     <span class="at">fill =</span> method)) <span class="sc">+</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)<span class="sc">+</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Income (CHF/month)"</span>,</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Proportion of Respondents"</span>,</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Acquisition Method"</span>)<span class="sc">+</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-income" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -760,7 +790,7 @@ Figure&nbsp;2: Purchasing Habits by Income Level
 </div>
 </div>
 </div>
-<p><a href="#fig-continent" class="quarto-xref">Figure&nbsp;3</a> shows disposal habits by respondents’ continent of origin. North American respondents did not report using clothing recycling bins or textile recycling centers, which may suggest lower awareness of textile recycling infrastructure. In contrast, respondents from Asia were least likely to dispose of clothing via regular trash, potentially indicating greater awareness of textile waste or cultural practices influenced by the region’s prominent role in the global textile industry. This aligns with global findings, where China stands out for its progress in circular economy efforts, while the USA struggles to translate awareness into action {Gonella}.</p>
+<p><a href="#fig-continent" class="quarto-xref">Figure&nbsp;3</a> shows disposal habits by respondents’ continent of origin. North American respondents did not report using clothing recycling bins or textile recycling centers, which may suggest lower awareness of textile recycling infrastructure. In contrast, respondents from Asia were least likely to dispose of clothing via regular trash, potentially indicating greater awareness of textile waste or cultural practices influenced by the region’s prominent role in the global textile industry. This aligns with global findings, where China stands out for its progress in circular economy efforts, while the USA struggles to translate awareness into action <span class="citation" data-cites="gonella2024">(<a href="#ref-gonella2024" role="doc-biblioref">Gonella et al. 2024</a>)</span>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape disposal method columns to long format</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>disposal_long <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
@@ -812,63 +842,86 @@ Figure&nbsp;3: Disposal Habits by Continent
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame with each disposal method and initialize percentage</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>disposal_habits_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">disposal_method =</span> <span class="fu">c</span>(<span class="st">"Donate"</span>, <span class="st">"Flea Market"</span>, <span class="st">"Family &amp; Friends"</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Sell Online"</span>, <span class="st">"Recyling Bins"</span>, <span class="st">"Regular Trash"</span>, </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Third Party Textile Recycling"</span>),</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">disposal_percentages =</span> <span class="fu">numeric</span>(<span class="dv">7</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate percentage of respondent's disposal habits and assign to correct place in data frame</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">1</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_thrift <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">2</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_flea_market <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">3</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_fam_friends <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">4</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_sell_online <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">5</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_recycling_bins <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">6</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_trash <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">7</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_textile_center <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Initial editing, not used in report</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame with each disposal method and initialize percentage</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>disposal_habits_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">disposal_method =</span> <span class="fu">c</span>(<span class="st">"Donate"</span>, <span class="st">"Flea Market"</span>, <span class="st">"Family &amp; Friends"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Sell Online"</span>, <span class="st">"Recyling Bins"</span>, <span class="st">"Regular Trash"</span>, </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Third Party Textile Recycling"</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">disposal_percentages =</span> <span class="fu">numeric</span>(<span class="dv">7</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate percentage of respondent's disposal habits and assign to correct place in data frame</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">1</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_thrift <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">2</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_flea_market <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">3</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_fam_friends <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">4</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_sell_online <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">5</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_recycling_bins <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">6</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_trash <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>disposal_habits_df[<span class="dv">7</span>, <span class="st">"disposal_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>disposal_textile_center <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame with each purchasing method and initialize percentage</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">purchasing_method =</span> <span class="fu">c</span>(<span class="st">"Thrift"</span>, <span class="st">"Hand-me-downs"</span>, <span class="st">"Clothing Swaps"</span>,</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Gifts"</span>, <span class="st">"Make Clothing"</span>),</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">purchasing_percentages =</span> <span class="fu">numeric</span>(<span class="dv">5</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate percentage of respondent's purchasing habits and assign to correct place in data frame</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df[<span class="dv">1</span>, <span class="st">"purchasing_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>get_thrift <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df[<span class="dv">2</span>, <span class="st">"purchasing_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>get_hand_me_down <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df[<span class="dv">3</span>, <span class="st">"purchasing_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>get_swaps <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df[<span class="dv">4</span>, <span class="st">"purchasing_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>get_gifts <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df[<span class="dv">5</span>, <span class="st">"purchasing_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>get_make_clothes <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Initial editing, not used in report</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame with each purchasing method and initialize percentage</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">purchasing_method =</span> <span class="fu">c</span>(<span class="st">"Thrift"</span>, <span class="st">"Hand-me-downs"</span>, <span class="st">"Clothing Swaps"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Gifts"</span>, <span class="st">"Make Clothing"</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">purchasing_percentages =</span> <span class="fu">numeric</span>(<span class="dv">5</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate percentage of respondent's purchasing habits and assign to correct place in data frame</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df[<span class="dv">1</span>, <span class="st">"purchasing_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>get_thrift <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df[<span class="dv">2</span>, <span class="st">"purchasing_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>get_hand_me_down <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df[<span class="dv">3</span>, <span class="st">"purchasing_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>get_swaps <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df[<span class="dv">4</span>, <span class="st">"purchasing_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>get_gifts <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>purchasing_habits_df[<span class="dv">5</span>, <span class="st">"purchasing_percentages"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>get_make_clothes <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate how many respondents purchase new clothes </span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>brand_sust_filtered <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(brand_sust))</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>new_clothes_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">buyers_percentage =</span> <span class="fu">numeric</span>(<span class="dv">1</span>),</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">brand_sust_percentage =</span> <span class="fu">numeric</span>(<span class="dv">1</span>))</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>new_clothes_df[<span class="dv">1</span>, <span class="st">"buyers_percentage"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>new_clothes <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>new_clothes_df[<span class="dv">1</span>, <span class="st">"brand_sust_percentage"</span>] <span class="ot">&lt;-</span>  <span class="fu">sum</span>(brand_sust_filtered<span class="sc">$</span>brand_sust <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(brand_sust_filtered) <span class="sc">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Initial editing, not used in report</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate how many respondents purchase new clothes </span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>brand_sust_filtered <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span> </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(brand_sust))</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>new_clothes_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">buyers_percentage =</span> <span class="fu">numeric</span>(<span class="dv">1</span>),</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">brand_sust_percentage =</span> <span class="fu">numeric</span>(<span class="dv">1</span>))</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>new_clothes_df[<span class="dv">1</span>, <span class="st">"buyers_percentage"</span>] <span class="ot">&lt;-</span> <span class="fu">sum</span>(data<span class="sc">$</span>new_clothes <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(data) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>new_clothes_df[<span class="dv">1</span>, <span class="st">"brand_sust_percentage"</span>] <span class="ot">&lt;-</span>  <span class="fu">sum</span>(brand_sust_filtered<span class="sc">$</span>brand_sust <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">count</span>(brand_sust_filtered) <span class="sc">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
 </section>
 <section id="conclusions" class="level1">
 <h1>Conclusions</h1>
 <ul>
-<li><p>Second-hand shopping is becoming increasingly popular amoung all income groups</p></li>
-<li><p>Higher income individuals are less likely to participate in clothing swaps and recieve hand-me-downs</p></li>
-<li><p>North Americans lack education over proper clothing disposal habits</p></li>
-<li></li>
+<li><p>Amoung younger respondent’s the key motivation for shopping second-hand is the style and uniqueness of older clothing items.</p></li>
+<li><p>Across all ages, the main reason to dispose of clothing is due to damage or end of life of the garment, suggesting a sustainable mindset in the ETH community.</p></li>
+<li><p>Thrifting is becoming increasingly popular among all income groups, supporting the normalization of second-hand shopping in urban areas.</p></li>
+<li><p>Higher income individuals, or older members of the ETH community, are less likely to participate in clothing swaps due to lack of exposure to such events.</p></li>
+<li><p>North American respondents demonstrate the least participation in circular fashion practices likely due to a lack of information or awareness.</p></li>
+<li><p>Asian respondent’s show the greatest participation in circular fashion practices and are the least likely to dispose of clothing in the regular trash.</p></li>
 </ul>
+<p>Study limitations:</p>
+<p>Convenience sampling and size of response pool may affect the generalizability of results. Proportions of respondents in each income bracket and continent of origin were not controlled.</p>
+</section>
+<section id="references" class="level1 unnumbered">
+
+
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ferraro2016" class="csl-entry" role="listitem">
+Ferraro, Carla, Sean Sands, and Jan Brace-Govan. 2016. <span>“The Role of Fashionability in Second-Hand Shopping Motivations.”</span> <em>Journal of Retailing and Consumer Services</em> 32 (September): 262–68. <a href="https://doi.org/10.1016/j.jretconser.2016.07.006">https://doi.org/10.1016/j.jretconser.2016.07.006</a>.
+</div>
+<div id="ref-gonella2024" class="csl-entry" role="listitem">
+Gonella, Jéssica dos Santos Leite, Moacir Godinho Filho, Lucila Maria de Souza Campos, and Gilberto Miller Devós Ganga. 2024. <span>“People’s Awareness and Behaviours of Circular Economy Around the World: Literature Review and Research Agenda.”</span> <em>Sustainability Accounting, Management and Policy Journal</em> 15 (5): 1118–54. <a href="https://doi.org/10.1108/SAMPJ-08-2022-0413">https://doi.org/10.1108/SAMPJ-08-2022-0413</a>.
+</div>
+<div id="ref-markova2018" class="csl-entry" role="listitem">
+Ivana Markova, and Julia Grajeda. 2018. <span>“Consumer <span>Attitudes</span> and <span>Purchase</span> <span>Intentions</span> Toward <span>Second</span>-Hand <span>Clothing</span> <span>Online</span> and Through <span>Social</span> <span>Media</span> <span>Platforms</span>: <span>Does</span> <span>Gender</span> and <span>Income</span> <span>Matter</span>?”</span> In. Vol. 75. Iowa State University Digital Press. <a href="https://www.iastatedigitalpress.com/itaa/article/id/1442/">https://www.iastatedigitalpress.com/itaa/article/id/1442/</a>.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -14,7 +14,7 @@ execute:
   warning: false
 editor_options: 
   chunk_output_type: console
-#bibliography: references.bib
+bibliography: references.bib
 editor: visual
 ---
 
@@ -78,7 +78,7 @@ summary_table |>
 
 ```
 
-@fig-motivation highlights the most common motivations behind second-hand clothing purchases, as well as the primary reasons for clothing disposal. Interestingly, the majority of participants reported choosing second-hand clothing for its style and uniqueness, rather than for economic or environmental reasons. Implying that among ETH members, vintage or second-hand clothing is seen as fashionable, rather than simply practical. This aligns with research showing that shifting fashion norms are helping drive the popularity of second-hand clothing among younger, educated populations {Ferraro}. On the disposal side, most respondents indicated they discard clothing only when it is damaged or worn out, reflecting a more sustainable attitude in which garments are kept until the end of their useful life, rather than discarded due to changing trends.
+@fig-motivation highlights the most common motivations behind second-hand clothing purchases, as well as the primary reasons for clothing disposal by respondent's age. Interestingly, the majority of younger participants reported choosing second-hand clothing for its style and uniqueness, rather than for economic or environmental reasons. Implying that among ETH members, vintage or second-hand clothing is seen as fashionable, rather than simply practical. This aligns with research showing that shifting fashion norms are helping drive the popularity of second-hand clothing among younger, educated populations [@ferraro2016]. On the disposal side, most respondents indicated they discard clothing only when it is damaged or worn out, reflecting a more sustainable attitude in which garments are kept until the end of their useful life, rather than discarded due to changing trends.
 
 ```{r}
 #| label: fig-motivation
@@ -88,9 +88,11 @@ library(patchwork)  # for combining plots
 
 # Count motivations
 motivation_plot <- data %>%
-  count(motivation) %>%
-  ggplot(aes(x = fct_reorder(motivation, n), y = n)) +
-  geom_col(fill = "#56B4E9") +
+  count(motivation, age) %>%
+  ggplot(mapping = aes(x = fct_reorder(motivation, n), 
+                       y = n,
+                       fill = age)) +
+  geom_col() +
   coord_flip() +
   labs(title = "Motivations for Purchasing Second-Hand",
        x = NULL, y = "Number of Respondents") +
@@ -98,9 +100,11 @@ motivation_plot <- data %>%
 
 # Count disposal reasons
 disposal_reason_plot <- data %>%
-  count(disposal_reason) %>%
-  ggplot(aes(x = fct_reorder(disposal_reason, n), y = n)) +
-  geom_col(fill = "#E69F00") +
+  count(disposal_reason, age) %>%
+  ggplot(mapping = aes(x = fct_reorder(disposal_reason, n), 
+                       y = n,
+                       fill = age)) +
+  geom_col() +
   coord_flip() +
   labs(title = "Reasons for Disposing of Clothing",
        x = NULL, y = "Number of Respondents") +
@@ -111,7 +115,7 @@ motivation_plot / disposal_reason_plot
 
 ```
 
-@fig-income explores the effect of income level on clothing acquisition methods. Thrift and vintage stores were widely used across all income groups, highlighting the growing normalization of second-hand fashion. As researcher Ivana Markova from San Francisco State University notes, thrifting has evolved into "a lifestyle for consumers of the urban city", reflecting a cultural shift that extends beyond economic necessity. However, respondents with a monthly income above 3000 CHF were the only group that did not participate in clothing swaps, and they showed less reliance on hand-me-downs compared to lower-income groups. This may suggest that older members of ETH, such as PhD students or faculty, are less engaged with circular fashion practices due to reduced exposure — for example, they may be less likely to see swap flyers on campus or hear about events through peer networks.
+@fig-income explores the effect of income level on clothing acquisition methods. Thrift and vintage stores were widely used across all income groups, highlighting the growing normalization of second-hand fashion. In @markova2018 the authors describe how thrifting has evolved into "a lifestyle for consumers of the urban city", reflecting a cultural shift that extends beyond economic necessity. However, respondents with a monthly income above 3000 CHF were the only group that did not participate in clothing swaps, and they showed less reliance on hand-me-downs compared to lower-income groups. This may suggest that older members of ETH, such as PhD students or faculty, are less engaged with circular fashion practices due to reduced exposure — for example, they may be less likely to see swap flyers on campus or hear about events through peer networks.
 
 ```{r}
 #| label: fig-income
@@ -146,7 +150,7 @@ ggplot(data = purchasing_long,
   scale_fill_colorblind()
 ```
 
-@fig-continent shows disposal habits by respondents’ continent of origin. North American respondents did not report using clothing recycling bins or textile recycling centers, which may suggest lower awareness of textile recycling infrastructure. In contrast, respondents from Asia were least likely to dispose of clothing via regular trash, potentially indicating greater awareness of textile waste or cultural practices influenced by the region’s prominent role in the global textile industry. This aligns with global findings, where China stands out for its progress in circular economy efforts, while the USA struggles to translate awareness into action {Gonella}.
+@fig-continent shows disposal habits by respondents’ continent of origin. North American respondents did not report using clothing recycling bins or textile recycling centers, which may suggest lower awareness of textile recycling infrastructure. In contrast, respondents from Asia were least likely to dispose of clothing via regular trash, potentially indicating greater awareness of textile waste or cultural practices influenced by the region’s prominent role in the global textile industry. This aligns with global findings, where China stands out for its progress in circular economy efforts, while the USA struggles to translate awareness into action [@gonella2024].
 
 ```{r}
 #| label: fig-continent
@@ -191,9 +195,10 @@ ggplot(lollipop_data, aes(x = percent, y = method, color = continent)) +
 
 ```
 
-Initial data editing code chunks.
-
 ```{r}
+#| eval: false
+## Initial editing, not used in report
+
 # Create data frame with each disposal method and initialize percentage
 disposal_habits_df <- data.frame(
   disposal_method = c("Donate", "Flea Market", "Family & Friends",
@@ -214,6 +219,9 @@ disposal_habits_df[7, "disposal_percentages"] <- sum(data$disposal_textile_cente
 ```
 
 ```{r}
+#| eval: false
+## Initial editing, not used in report
+
 # Create data frame with each purchasing method and initialize percentage
 purchasing_habits_df <- data.frame(
   purchasing_method = c("Thrift", "Hand-me-downs", "Clothing Swaps",
@@ -230,6 +238,9 @@ purchasing_habits_df[5, "purchasing_percentages"] <- sum(data$get_make_clothes =
 ```
 
 ```{r}
+#| eval: false
+## Initial editing, not used in report
+
 # Calculate how many respondents purchase new clothes 
 brand_sust_filtered <- data |> 
   filter(!is.na(brand_sust))
@@ -244,11 +255,17 @@ new_clothes_df[1, "brand_sust_percentage"] <-  sum(brand_sust_filtered$brand_sus
 
 # Conclusions
 
--   Second-hand shopping is becoming increasingly popular amoung all income groups
+-   Amoung younger respondent's the key motivation for shopping second-hand is the style and uniqueness of older clothing items.
 
--   Higher income individuals are less likely to participate in clothing swaps and recieve hand-me-downs
+-   Across all ages, the main reason to dispose of clothing is due to damage or end of life of the garment, suggesting a sustainable mindset in the ETH community.
 
--   North Americans lack education over proper clothing disposal habits
+-   Thrifting is becoming increasingly popular among all income groups, supporting the normalization of second-hand shopping in urban areas.
+
+-   Higher income individuals, or older members of the ETH community, are less likely to participate in clothing swaps due to lack of exposure to such events.
+
+-   North American respondents demonstrate the least participation in circular fashion practices likely due to a lack of information or awareness.
+
+-   Asian respondent's show the greatest participation in circular fashion practices and are the least likely to dispose of clothing in the regular trash.
 
 Study limitations:
 
