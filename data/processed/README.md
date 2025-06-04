@@ -2,7 +2,7 @@
 
 ## General information
 
-1.  Title of Dataset:  
+1.  Title of Dataset:  Clothing Purchasing and Disposal Habits of ETH Zurich Members
 
 2.  Author Information
 
@@ -12,15 +12,6 @@
 - Surname: Darvish
 - ORCID iD: 0009-0000-4405-9889
 - Email: adarvish@student.ethz.ch
-
-**Author B**
-
-- First name:
-- Surname:
-- ORCID iD
-- Email:
-
-etc.
 
 3.  Date of data collection (single date, range, approximate date): 21.05.2025 - 22.05.2025
 
@@ -41,13 +32,15 @@ Recommended: This work is licensed under the Creative Commons Attribution 4.0 In
 
 4.  Links/relationships to ancillary data sets: 
 
-5.  Was data derived from another source? 
+5.  Was data derived from another source? No
 
 ## Methodological information
 
-1.  Description of methods used for collection/generation of data:
+1.  Description of methods used for collection/generation of data: 
+Data was collected using a survey questionnaire created in Google Forms, which included questions about demographics (age, gender, education, income, continent of origin), environmental awareness, clothing purchasing habits, and clothing disposal practices. All clothing purchasing and disposal questions were dichotomous choice questions (yes or no). Responses were gathered in two ways: (1) via a link shared on WhatsApp with ETH students, and (2) through a QR code distributed to ETH members on Polyterrace over a one-hour period.
 
 2.  Methods for processing the data:
+A total of 20 responses were recorded, and the raw data was exported to Google Sheets. Data cleaning and analysis were conducted in Quarto using R scripts.
 
 3.  Instrument- or software-specific information needed to interpret the
     data: 
