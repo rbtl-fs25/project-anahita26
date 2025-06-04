@@ -1,0 +1,30 @@
+variable_name,description
+date,date survey was taken
+age,age (years)
+gender,gender
+eth_status,academic status at ETH
+study_field,field of study 
+continent,continent of origin 
+income,monthly income (CHF)
+env_consious ,level of environmental consiousness  (0-5)
+new_clothes,purchasing of clothes first-hand (y/n)
+new_items,number of new items purchased in the last semester
+brand_sust,consideration of brand's sustainability practices (y/n)
+second_hand,percentage of clothing purchases that were second-hand in the last semester 
+motivation,primary motivation for shopping second-hand
+disposal,frequency of clothing disposal in past semester
+disposal_reason,primary reason for disposing of clothing 
+repair,frequency of attemping to repair or repurpose clothing before disposal (0-5)
+disposal_donation,donation of clothes (y/n)
+disposal_flea_market,selling clothes at flea market (y/n)
+disposal_fam_friends,giving clothes to family and friends (y/n)
+disposal_sell_online,selling clothes online (y/n)
+disposal_recycling_bins,disposing clothes in recycling bins (y/n)
+disposal_trash,disposing clothes in regular trash (y/n)
+disposal_textile_center,disposing clothes through third party textile recycling center (y/n)
+get_thrift,thrifting second-hand clothes (y/n)
+get_hand_me_down,recieving clothes through hand-me-downs (y/n)
+get_swaps,recieving clothes through clohting swpas (y/n)
+get_gifts,recieving clothes as gifts (y/n)
+get_make_clothes,making own clothing (y/n)
+email,email of respondent's interested in reading final project

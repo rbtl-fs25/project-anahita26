@@ -3,7 +3,7 @@ title: "Clothing Purchasing and Disposal Habits of ETH Zurich Members"
 date: today
 author:
   - name: Anahita Darvish
-    orcid: 0000-0003-2196-5015
+    orcid: 0009-0000-4405-9889
     email: adarvish@student.ethz.ch
     affiliation: 
       - name: ETH Zurich

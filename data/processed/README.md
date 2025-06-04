@@ -8,10 +8,10 @@
 
 **Author A**
 
-- First name:
-- Surname:
-- ORCID iD
-- Email:
+- First name: Anahita
+- Surname: Darvish
+- ORCID iD: 0009-0000-4405-9889
+- Email: adarvish@student.ethz.ch
 
 **Author B**
 
@@ -22,12 +22,12 @@
 
 etc.
 
-3.  Date of data collection (single date, range, approximate date):
+3.  Date of data collection (single date, range, approximate date): 21.05.2025 - 22.05.2025
 
-4.  Geographic location of data collection:
+4.  Geographic location of data collection: Zurich, CH
 
 5.  Information about funding sources that supported the collection of
-    the data: 
+    the data: No funding was required.
 
 ## Sharing / access information
 
@@ -37,7 +37,7 @@ Recommended: This work is licensed under the Creative Commons Attribution 4.0 In
 
 2.  Links to publications that cite or use the data: 
 
-3.  Links to other publicly accessible locations of the data: -
+3.  Links to other publicly accessible locations of the data: 
 
 4.  Links/relationships to ancillary data sets: 
 
@@ -59,5 +59,5 @@ Recommended: This work is licensed under the Creative Commons Attribution 4.0 In
 6.  Describe any quality-assurance procedures performed on the data: 
 
 7.  People involved with sample collection, processing, analysis and/or
-    submission:
+    submission: Only the author was involved in data collection, processing, and analysis.
 
