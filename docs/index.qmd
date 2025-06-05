@@ -1,5 +1,5 @@
 ---
-title: "Clothing Purchasing and Disposal Habits of ETH Zurich Members"
+title: "Clothing Consumption and Disposal Habits of ETH Zurich Members"
 date: today
 author:
   - name: Anahita Darvish
