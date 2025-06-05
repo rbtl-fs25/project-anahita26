@@ -155,13 +155,14 @@ div.csl-indent {
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>Textile waste has become an enormous burden on the environment as fast fashion industries have risen in popularity. The low-price, trendy clothing offered by fast fashion industries, including ZARA and H&amp;M, are produced with lower quality materials leading to shorter clothing lifetimes and larger amounts of textile waste. Circular fashion, including the reuse and recycling of clothing, is the key to combating this issue. This report aims to answer the following research question:</p>
-<p>What are the clothing disposal habits of ETH Zurich students, and how are they influenced by their clothing consumption patterns (new vs second-hand) during the past semester?</p>
-<p>By analyzing the clothing purchasing and disposal behaviors of ETH Zurich members, recommendations for the promotion of a circular fashion mindset at ETH can be made.</p>
+<p>Textile waste has become an enormous burden on the environment as fast fashion industries have risen in popularity. The low-price, trendy clothing offered by fast fashion industries, including ZARA and H&amp;M, are produced with lower quality materials leading to shorter clothing lifetimes and larger amounts of textile waste <span class="citation" data-cites="joung2013">(<a href="#ref-joung2013" role="doc-biblioref">Joung and Park-Poaps 2013</a>)</span>. In response, circular fashion practices, including the reuse and recycling of clothing, have emerged as a sustainable alternative.</p>
+<p>This report investigates how the ETH community engages with sustainable fashion practices. It specifically aims to answer the following research question:</p>
+<p><em>What are the clothing purchasing and disposal habits of ETH Zurich members during the past semester, and how do they reflect sustainable fashion practices?</em></p>
+<p>To explore this question, data was collected via an online survey questionaire distributed to ETH Zurich members. Subsequent data cleaning and analysis was performed in Google Sheets and Quarto using R scripts. By analyzing the clothing purchasing and disposal behaviors of ETH Zurich members, recommendations for the promotion of circular fashion practices at ETH can be made.</p>
 </section>
 <section id="methods" class="level1">
 <h1>Methods</h1>
-<p>Data was collected using a survey questionnaire created in Google Forms, which included questions about demographics (age, gender, education, income, continent of origin), environmental awareness, clothing purchasing habits, and clothing disposal practices. All clothing purchasing and disposal questions were dichotomous choice questions (yes or no). Responses were gathered in two ways: (1) via a link shared on WhatsApp with ETH students, and (2) through a QR code distributed to ETH members on Polyterrace over a one-hour period. A total of 20 responses were recorded, and the raw data was exported to Google Sheets. Data cleaning and analysis were conducted in Quarto using R scripts.</p>
+<p>Data was collected using a survey questionnaire created in Google Forms, which included questions about demographics (age, gender, education, income, continent of origin), environmental awareness, clothing purchasing habits, and clothing disposal practices. All clothing purchasing and disposal questions were dichotomous choice questions (yes or no). Responses were gathered in two ways: (1) via a link shared on WhatsApp with ETH students, and (2) through a QR code distributed to ETH members on Polyterrace over a one-hour period. A total of 20 responses were recorded, and the raw data was exported to Google Sheets. Data cleaning and analysis were conducted in Quarto using R scripts. Verbal or written consent was provided by all respondents. Respondents who wished to read the final report could provide their email address in the survey, otherwise, the responses were anonymous.</p>
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
@@ -210,23 +211,23 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
 </figcaption>
 <div aria-describedby="tbl-stats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="rjodnzsvsm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rjodnzsvsm table {
+<div id="tqxwtgtcpq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tqxwtgtcpq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rjodnzsvsm thead, #rjodnzsvsm tbody, #rjodnzsvsm tfoot, #rjodnzsvsm tr, #rjodnzsvsm td, #rjodnzsvsm th {
+#tqxwtgtcpq thead, #tqxwtgtcpq tbody, #tqxwtgtcpq tfoot, #tqxwtgtcpq tr, #tqxwtgtcpq td, #tqxwtgtcpq th {
   border-style: none;
 }
 
-#rjodnzsvsm p {
+#tqxwtgtcpq p {
   margin: 0;
   padding: 0;
 }
 
-#rjodnzsvsm .gt_table {
+#tqxwtgtcpq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -252,12 +253,12 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-left-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_caption {
+#tqxwtgtcpq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rjodnzsvsm .gt_title {
+#tqxwtgtcpq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -269,7 +270,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-width: 0;
 }
 
-#rjodnzsvsm .gt_subtitle {
+#tqxwtgtcpq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -281,7 +282,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-top-width: 0;
 }
 
-#rjodnzsvsm .gt_heading {
+#tqxwtgtcpq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -293,13 +294,13 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_bottom_border {
+#tqxwtgtcpq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_col_headings {
+#tqxwtgtcpq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -314,7 +315,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_col_heading {
+#tqxwtgtcpq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -334,7 +335,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   overflow-x: hidden;
 }
 
-#rjodnzsvsm .gt_column_spanner_outer {
+#tqxwtgtcpq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -346,15 +347,15 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 4px;
 }
 
-#rjodnzsvsm .gt_column_spanner_outer:first-child {
+#tqxwtgtcpq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rjodnzsvsm .gt_column_spanner_outer:last-child {
+#tqxwtgtcpq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rjodnzsvsm .gt_column_spanner {
+#tqxwtgtcpq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -366,11 +367,11 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   width: 100%;
 }
 
-#rjodnzsvsm .gt_spanner_row {
+#tqxwtgtcpq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rjodnzsvsm .gt_group_heading {
+#tqxwtgtcpq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -396,7 +397,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   text-align: left;
 }
 
-#rjodnzsvsm .gt_empty_group_heading {
+#tqxwtgtcpq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -411,15 +412,15 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   vertical-align: middle;
 }
 
-#rjodnzsvsm .gt_from_md > :first-child {
+#tqxwtgtcpq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rjodnzsvsm .gt_from_md > :last-child {
+#tqxwtgtcpq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rjodnzsvsm .gt_row {
+#tqxwtgtcpq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -438,7 +439,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   overflow-x: hidden;
 }
 
-#rjodnzsvsm .gt_stub {
+#tqxwtgtcpq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -451,7 +452,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#rjodnzsvsm .gt_stub_row_group {
+#tqxwtgtcpq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -465,15 +466,15 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   vertical-align: top;
 }
 
-#rjodnzsvsm .gt_row_group_first td {
+#tqxwtgtcpq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rjodnzsvsm .gt_row_group_first th {
+#tqxwtgtcpq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rjodnzsvsm .gt_summary_row {
+#tqxwtgtcpq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -483,16 +484,16 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#rjodnzsvsm .gt_first_summary_row {
+#tqxwtgtcpq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_first_summary_row.thick {
+#tqxwtgtcpq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rjodnzsvsm .gt_last_summary_row {
+#tqxwtgtcpq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -502,7 +503,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_grand_summary_row {
+#tqxwtgtcpq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -512,7 +513,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#rjodnzsvsm .gt_first_grand_summary_row {
+#tqxwtgtcpq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -522,7 +523,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-top-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_last_grand_summary_row_top {
+#tqxwtgtcpq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -532,11 +533,11 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_striped {
+#tqxwtgtcpq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rjodnzsvsm .gt_table_body {
+#tqxwtgtcpq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -545,7 +546,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-bottom-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_footnotes {
+#tqxwtgtcpq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -559,7 +560,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_footnote {
+#tqxwtgtcpq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -568,7 +569,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#rjodnzsvsm .gt_sourcenotes {
+#tqxwtgtcpq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -582,7 +583,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   border-right-color: #D3D3D3;
 }
 
-#rjodnzsvsm .gt_sourcenote {
+#tqxwtgtcpq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -590,72 +591,72 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
   padding-right: 5px;
 }
 
-#rjodnzsvsm .gt_left {
+#tqxwtgtcpq .gt_left {
   text-align: left;
 }
 
-#rjodnzsvsm .gt_center {
+#tqxwtgtcpq .gt_center {
   text-align: center;
 }
 
-#rjodnzsvsm .gt_right {
+#tqxwtgtcpq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rjodnzsvsm .gt_font_normal {
+#tqxwtgtcpq .gt_font_normal {
   font-weight: normal;
 }
 
-#rjodnzsvsm .gt_font_bold {
+#tqxwtgtcpq .gt_font_bold {
   font-weight: bold;
 }
 
-#rjodnzsvsm .gt_font_italic {
+#tqxwtgtcpq .gt_font_italic {
   font-style: italic;
 }
 
-#rjodnzsvsm .gt_super {
+#tqxwtgtcpq .gt_super {
   font-size: 65%;
 }
 
-#rjodnzsvsm .gt_footnote_marks {
+#tqxwtgtcpq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rjodnzsvsm .gt_asterisk {
+#tqxwtgtcpq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rjodnzsvsm .gt_indent_1 {
+#tqxwtgtcpq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rjodnzsvsm .gt_indent_2 {
+#tqxwtgtcpq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rjodnzsvsm .gt_indent_3 {
+#tqxwtgtcpq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rjodnzsvsm .gt_indent_4 {
+#tqxwtgtcpq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rjodnzsvsm .gt_indent_5 {
+#tqxwtgtcpq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rjodnzsvsm .katex-display {
+#tqxwtgtcpq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rjodnzsvsm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#tqxwtgtcpq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -705,7 +706,7 @@ Table&nbsp;1: Summary Statistics of Key Survey Variables
 </figure>
 </div>
 </div>
-<p><a href="#fig-motivation" class="quarto-xref">Figure&nbsp;1</a> highlights the most common motivations behind second-hand clothing purchases, as well as the primary reasons for clothing disposal among respondent’s, the majority of whom are young adults. Interestingly, most participants reported choosing second-hand clothing for its style and uniqueness, rather than for economic or environmental reasons. Implying that among ETH members, vintage or second-hand clothing is seen as fashionable, rather than simply practical. This aligns with research showing that shifting fashion norms are helping drive the popularity of second-hand clothing among younger, educated populations <span class="citation" data-cites="ferraro2016">(<a href="#ref-ferraro2016" role="doc-biblioref">Ferraro, Sands, and Brace-Govan 2016</a>)</span>. On the disposal side, most respondents indicated they discard clothing only when it is damaged or worn out, reflecting a more sustainable attitude in which garments are kept until the end of their useful life, rather than discarded due to changing trends.</p>
+<p><a href="#fig-motivation" class="quarto-xref">Figure&nbsp;1</a> highlights the most common motivations behind second-hand clothing purchases, as well as the primary reasons for clothing disposal among respondent’s, the majority of whom are young adults. Interestingly, most participants reported choosing second-hand clothing for its style and uniqueness, rather than for economic or environmental reasons. Implying that among ETH members, vintage or second-hand clothing is seen as fashionable, rather than simply practical. This aligns with research showing that shifting fashion norms are helping drive the popularity of second-hand clothing among younger, educated populations <span class="citation" data-cites="ferraro2016">(<a href="#ref-ferraro2016" role="doc-biblioref">Ferraro, Sands, and Brace-Govan 2016</a>)</span>. On the disposal side, most respondents indicated they discard clothing only when it is damaged or worn out, reflecting a more sustainable attitude in which garments are kept until the end of their useful life, rather than discarded due to changing trends. This aligns with the findings of <a href="#tbl-stats" class="quarto-xref">Table&nbsp;1</a> in which respondent’s demonstrated a moderately high level of environemental consciousness.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)  <span class="co"># for combining plots</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -847,13 +848,11 @@ Figure&nbsp;3: Disposal Habits by Continent
 <section id="conclusions" class="level1">
 <h1>Conclusions</h1>
 <ul>
-<li><p>The average ETH Zurich member demonstrates a moderatly high level of environmental consciousness and purchases over a third of their clothing from second-hand sources; however, large variablity exists in the percentage of second-hand clothing purchased.</p></li>
-<li><p>Young adults at ETH believe second-hand shopping to be trendy, as their key motivation for shopping second-hand is the style and uniqueness.</p></li>
-<li><p>The main reason to dispose of clothing is due to damage or end of life of the garment, suggesting a sustainable mindset in the ETH community.</p></li>
-<li><p>Thrifting is becoming increasingly popular among all income groups, supporting the normalization of second-hand shopping in urban areas.</p></li>
-<li><p>Higher income individuals are less likely to participate in circular fashion practices on campus due to lack of exposure to such events.</p></li>
-<li><p>Respondents of North American origin demonstrate the least participation in circular fashion practices likely due to a lack of information or awareness.</p></li>
-<li><p>Respondents of Asian origin show the greatest participation in circular fashion practices and are the least likely to dispose of clothing in the regular trash.</p></li>
+<li><p><strong>Environmental awareness:</strong> The average ETH Zurich member demonstrates a moderately high level of environmental consciousness, scoring 3.3 on a scale from 0 to 5. On average, 36.9% of their clothing purchases are second-hand, though this percentage can vary significantly among individuals.</p></li>
+<li><p><strong>Motivations:</strong> Second hand shopping is largely motivated by style and uniqueness, suggesting that thrifting is seen as not only economical or sustainable, but also fashionable in the ETH community.</p></li>
+<li><p><strong>Disposal behavior:</strong> The main reason to dispose of clothing is due to damage or end of life of the garment, suggesting a sustainable mindset in the ETH community.</p></li>
+<li><p><strong>Socioeconomic differences:</strong> Thrifting is becoming increasingly popular among all income groups, supporting the normalization of second-hand shopping in urban, educated environments. However, participation in circular fashion events on campus are lower in higher income individuals, likely due to lack of exposure to such events.</p></li>
+<li><p><strong>Regional differences:</strong> respondents of North American origin reported the lowest engagement with circular fashion, potentially due to a lack of information or awareness. In contrast, respondents of Asian origin demonstrated the highest participation and were least likely to dispose of clothing in the regular trash—possibly reflecting stronger awareness or cultural practices related to waste reduction.</p></li>
 </ul>
 <p>Recommendations:</p>
 <ul>
@@ -878,6 +877,9 @@ Gonella, Jéssica dos Santos Leite, Moacir Godinho Filho, Lucila Maria de Souza 
 </div>
 <div id="ref-markova2018" class="csl-entry" role="listitem">
 Ivana Markova, and Julia Grajeda. 2018. <span>“Consumer <span>Attitudes</span> and <span>Purchase</span> <span>Intentions</span> Toward <span>Second</span>-Hand <span>Clothing</span> <span>Online</span> and Through <span>Social</span> <span>Media</span> <span>Platforms</span>: <span>Does</span> <span>Gender</span> and <span>Income</span> <span>Matter</span>?”</span> In. Vol. 75. Iowa State University Digital Press. <a href="https://www.iastatedigitalpress.com/itaa/article/id/1442/">https://www.iastatedigitalpress.com/itaa/article/id/1442/</a>.
+</div>
+<div id="ref-joung2013" class="csl-entry" role="listitem">
+Joung, Hyun-Mee, and Haesun Park-Poaps. 2013. <span>“Factors Motivating and Influencing Clothing Disposal Behaviours.”</span> <em>International Journal of Consumer Studies</em> 37 (1): 105–11. <a href="https://doi.org/10.1111/j.1470-6431.2011.01048.x">https://doi.org/10.1111/j.1470-6431.2011.01048.x</a>.
 </div>
 </div></section></div></main>
 <!-- /main column -->

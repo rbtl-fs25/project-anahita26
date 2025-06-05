@@ -2,7 +2,7 @@
 
 ## General information
 
-1.  Title of Dataset:  Clothing Consumption and Disposal Habits of ETH Zurich Members
+1.  Title of Dataset:  Clothing Purchasing and Disposal Habits of ETH Zurich Members
 
 2.  Author Information
 
@@ -27,7 +27,8 @@ This work is licensed under the Creative Commons Attribution 4.0 International l
 
 2.  Links to publications that cite or use the data: Currently no publications that cite this data.
 
-3.  Links to other publicly accessible locations of the data: https://rbtl-fs25.github.io/project-anahita26/
+3.  Links to other publicly accessible locations of the data: 
+https://docs.google.com/spreadsheets/d/1cjFci12yRxlCgHr1N_c6NOE5upVzh_8CKqLv03BZyt4/edit?gid=722433670#gid=722433670
 
 4.  Links/relationships to ancillary data sets: None.
 
