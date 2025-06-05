@@ -2,7 +2,7 @@
 
 ## General information
 
-1.  Title of Dataset:  Clothing Purchasing and Disposal Habits of ETH Zurich Members
+1.  Title of Dataset:  Clothing Consumption and Disposal Habits of ETH Zurich Members
 
 2.  Author Information
 
@@ -22,17 +22,16 @@
 
 ## Sharing / access information
 
-1.  Licenses/restrictions placed on the data:  
+1.  Licenses/restrictions placed on the data:
+This work is licensed under the Creative Commons Attribution 4.0 International license (CC-BY-4.0).
 
-Recommended: This work is licensed under the Creative Commons Attribution 4.0 International license (CC-BY-4.0).
+2.  Links to publications that cite or use the data: Currently no publications that cite this data.
 
-2.  Links to publications that cite or use the data: 
+3.  Links to other publicly accessible locations of the data: https://rbtl-fs25.github.io/project-anahita26/
 
-3.  Links to other publicly accessible locations of the data: 
+4.  Links/relationships to ancillary data sets: None.
 
-4.  Links/relationships to ancillary data sets: 
-
-5.  Was data derived from another source? No
+5.  Was data derived from another source? No.
 
 ## Methodological information
 
@@ -43,13 +42,13 @@ Data was collected using a survey questionnaire created in Google Forms, which i
 A total of 20 responses were recorded, and the raw data was exported to Google Sheets. Data cleaning and analysis were conducted in Quarto using R scripts.
 
 3.  Instrument- or software-specific information needed to interpret the
-    data: 
+    data: Any software that can read R scripts is applicable.
 
-4.  Standards and calibration information, if appropriate: -
+4.  Standards and calibration information, if appropriate: None.
 
-5.  Environmental/experimental conditions: 
+5.  Environmental/experimental conditions: The survey was conducted digitally with via mobile devices and computers. A link or QR code was shared with participants.
 
-6.  Describe any quality-assurance procedures performed on the data: 
+6.  Describe any quality-assurance procedures performed on the data: Data cleaning involved changing column names, removing incomplete answers, and changing number ranges to a single value. All responses were manually reviewed before analysis.
 
 7.  People involved with sample collection, processing, analysis and/or
     submission: Only the author was involved in data collection, processing, and analysis.
